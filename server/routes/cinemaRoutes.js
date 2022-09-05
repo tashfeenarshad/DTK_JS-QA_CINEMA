@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const express = require('express');
+const { findById } = require('../schema/cinemaSchema.js');
 const Cinema = require('../schema/cinemaSchema.js');
 
 const app = express();
@@ -38,16 +39,27 @@ router.post("/create", (req, res) => {
 })
 
 router.put("/update/:id", (req, res) => {
-    const updated = Cinema.findByIdAndUpdate(
-        {_id: req.params.id},
-        req.body,
-        {new: true}
-    );
-    (updated) ? res.status(202).send(`${updated}`) : next(new NotFound("Error: not found"));
+    // const cinema = req.body;
+    // const index = req.params.id;
+    // const old = Cinema[index];
+    // Cinema[index] = cinema;
+    // res.send(`${old} replaced with ${cinema}`);
+
+    Cinema.findByIdAndUpdate({_id: req.params.id}, req.body, (err, result) => {
+        if (err)res.send(err);
+
+        res.send("Updated Movie : " + req.params.id);
+    })
+
 })
 
-router.put("/delete/:id", (req, res) => {
-    res.send(cinemas.splice(req.params.id, 1));
+router.delete("/delete/:id", (req, res) => {
+    Cinema.findByIdAndDelete({_id: req.params.id}, (err, result) => {
+        if (err)res.send(err);
+
+        res.send("Deleted Movie : " + req.params.id);
+    })
+
 })
 
 
