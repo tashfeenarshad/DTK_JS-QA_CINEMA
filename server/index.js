@@ -3,6 +3,7 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const movie = require("./routes/movieRoutes.js");
 
 const app = express();
 app.use(express.json());
@@ -16,9 +17,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/cinema", {useNewUrlParser : true}, (
     }
 })
 
-const cinema = require("./routes/cinemaRoutes.js");
-
-app.use("/cinema", cinema);
+app.use("/movie", movie);
 
 
 
