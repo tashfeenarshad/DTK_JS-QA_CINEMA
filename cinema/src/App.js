@@ -16,6 +16,7 @@ import PlacesToGo from './Components/PlacesToGo';
 import Screens from './Components/Screens';
 //import SearchBar from './Components/SearchBar';
 
+
 // As you work add imports to components used
 
 import { Routes, Route } from "react-router-dom";
@@ -26,6 +27,7 @@ function App() {
     <Navigation />
     {/* <Header /> */}
     {/* <Searchbar /> */}
+    
     <div className="container">
         <Routes>
           <Route path="/about" element={<About />} />
