@@ -1,3 +1,37 @@
-export default function Directions() {
-    return <h1>Directions</h1>
-  }
+import GoogleMap from './GoogleMap';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+
+function Directions() {
+    return (
+    <>
+    <h1>Directions</h1>
+    
+    <div>
+        <Row>
+            <Col lg="5">
+                <br/>
+                <div>
+                    <h3>Public Transport</h3>
+                    <p>We are within walking distance of Tower Hill Underground, London Bridge Underground and Tower Gateway DLR station</p>
+                    
+                    <h3>Address</h3>
+                       <p>3rd Floor
+                       <br />
+                       International House
+                       <br />
+                       1 St Katherine's Way
+                       <br />
+                       London
+                       <br />
+                       E1W 1UN</p>
+                </div>
+            </Col>
+            <Col lg="1"></Col>
+            <Col className="map-info" lg="6">
+                <GoogleMap />
+            </Col>
+        </Row>      
+    </div>
+  </>);}
+  export default Directions;
