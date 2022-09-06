@@ -29,7 +29,7 @@ router.put("/update/:id", (req, res) => {
 
     Movie.findByIdAndUpdate({_id: req.params.id}, req.body, (err, result) => {
         if (err)res.send(err);
-        res.status(202).send("Updated Movie : " + req.body.title);
+        res.status(202).send(`Updated Movie ${req.body.title}`);
     })
 
 })
@@ -37,7 +37,7 @@ router.put("/update/:id", (req, res) => {
 router.delete("/delete/:id", (req, res) => {
     Movie.findByIdAndDelete({_id: req.params.id}, (err, result) => {
         if (err)res.send(err);
-        res.status(204).send("Deleted Movie with ID : " + req.params.id);
+        res.status(204).send(`Deleted Movie with ID : ${req.params.id}`);
     })
 
 })

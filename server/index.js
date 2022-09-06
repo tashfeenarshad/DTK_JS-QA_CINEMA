@@ -4,6 +4,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const movie = require("./routes/movieRoutes.js");
+const discussion = require("./routes/discussionRoutes.js");
 
 const app = express();
 app.use(express.json());
@@ -18,6 +19,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/cinema", {useNewUrlParser : true}, (
 })
 
 app.use("/movie", movie);
+app.use("/discussion", discussion);
 
 
 
