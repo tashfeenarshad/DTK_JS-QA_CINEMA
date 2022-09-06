@@ -5,7 +5,7 @@ import Classifications from './Components/Classifications';
 import Contact from './Components/Contact';
 import Directions from './Components/Directions';
 import Discussion from './Components/Discussion';
-//import Footer from './Components/Footer';
+import Footer from './Components/Footer';
 //import Header from './Components/Header';
 import Home from './Components/Home';
 import Listings from './Components/Listings';
@@ -41,7 +41,7 @@ function App() {
           <Route path="/placestogo" element={<PlacesToGo />} />
           <Route path="/screens" element={<Screens />} />
         </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   </>
   );
