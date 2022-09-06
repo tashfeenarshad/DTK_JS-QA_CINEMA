@@ -1,0 +1,96 @@
+use cinema;
+
+db.createCollection("movies");
+
+db.movies.insertMany([
+    {
+        "title": "Avatar",
+        "year": "2009",
+        "rated": "PG-13",
+        "released": "18 Dec 2009",
+        "runtime": "162 min",
+        "genre": "Action, Adventure, Fantasy",
+        "director": "James Cameron",
+        "actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+        "plot": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNjA3NGExZDktNDlhZC00NjYyLTgwNmUtZWUzMDYwMTZjZWUyXkEyXkFqcGdeQXVyMTU1MDM3NDk0._V1_.jpg",
+        "showtime": [
+            {
+                "days" : ["Monday"],
+                "times" : ["13:00", "15:00", "18:00"]
+            }
+        ]
+    },
+    {
+        "title": "I Am Legend",
+        "year": "2007",
+        "rated": "PG-13",
+        "released": "14 Dec 2007",
+        "runtime": "101 min",
+        "genre": "Drama, Horror, Sci-Fi",
+        "director": "Francis Lawrence",
+        "actors": "Will Smith, Alice Braga, Charlie Tahan, Salli Richardson-Whitfield",
+        "plot": "years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BYTE1ZTBlYzgtNmMyNS00ZTQ2LWE4NjEtZjUxNDJkNTg2MzlhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+        "showtime": [
+            {
+                "days" : ["Tuesday"],
+                "times" : ["13:00", "15:00", "18:00"]
+            }
+        ]
+    },
+    {
+        "title": "300",
+        "year": "2006",
+        "rated": "R",
+        "released": "09 Mar 2007",
+        "runtime": "117 min",
+        "genre": "Action, Drama, Fantasy",
+        "director": "Zack Snyder",
+        "actors": "Gerard Butler, Lena Headey, Dominic West, David Wenham",
+        "plot": "King Leonidas of Sparta and a force of 300 men fight the Persians at Thermopylae in 480 B.C.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNWMxYTZlOTUtZDExMi00YzZmLTkwYTMtZmM2MmRjZmQ3OGY4XkEyXkFqcGdeQXVyMTAwMzUyMzUy._V1_FMjpg_UX1000_.jpg",
+        "showtime": [
+            {
+                "days" : ["Wednesday"],
+                "times" : ["13:00", "15:00", "18:00"]
+            }
+        ]
+    },
+    {
+        "title": "The Avengers",
+        "year": "2012",
+        "rated": "PG-13",
+        "released": "04 May 2012",
+        "runtime": "143 min",
+        "genre": "Action, Sci-Fi, Thriller",
+        "director": "Joss Whedon",
+        "actors": "Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth",
+        "plot": "Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+        "showtime": [
+            {
+                "days" : ["Thursday"],
+                "times" : ["13:00", "15:00", "18:00"]
+            }
+        ]
+    },
+    {
+        "title": "The Wolf of Wall Street",
+        "year": "2013",
+        "rated": "R",
+        "released": "25 Dec 2013",
+        "runtime": "180 min",
+        "genre": "Biography, Comedy, Crime",
+        "director": "Martin Scorsese",
+        "actors": "Leonardo DiCaprio, Jonah Hill, Margot Robbie, Matthew McConaughey",
+        "plot": "Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_.jpg",
+        "showtime": [
+            {
+                "days" : ["Friday"],
+                "times" : ["13:00", "15:00", "18:00"]
+            }
+        ]
+    }
+])
