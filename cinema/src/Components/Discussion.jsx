@@ -1,7 +1,8 @@
-export default function Discussion() {
+import React from 'react' {
+  
     return <h1>Discussion</h1>
   }
 
-import React from 'react'
+export default function Discussion() 
 
 
