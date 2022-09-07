@@ -1,10 +1,12 @@
+"use strict";
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const showtimeSchema = new Schema({
     days : [String],
     times : [String]
-})
+});
 
 const movieSchema = new Schema({
 
@@ -49,6 +51,6 @@ const movieSchema = new Schema({
     },
     showtime : [showtimeSchema]
 
-})
+});
 
 module.exports = mongoose.model('Movie', movieSchema);
