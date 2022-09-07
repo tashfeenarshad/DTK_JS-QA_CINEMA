@@ -1,15 +1,16 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 function About() {
     return (
   <>
     <h1>About</h1>
     
-
-  
-      <Card style={{ width: '50rem' }} >
+      <br/>
+  <Row>
+      <Card style={{ width: '20rem' }} >
         <Card.Img variant="top" src="holder.js/100px180" alt=""/>
         <Card.Body>
           <Card.Title>Damian Poclitar</Card.Title>
@@ -24,7 +25,7 @@ function About() {
         </Card.Body>
       </Card>
 
-      <Card style={{ width: '50rem' }} >
+      <Card style={{ width: '20rem' }} >
         <Card.Img variant="top" src="holder.js/100px180" alt=""/>
         <Card.Body>
           <Card.Title>Jariful Hoque</Card.Title>
@@ -39,7 +40,7 @@ function About() {
         </Card.Body>
       </Card>
 
-      <Card style={{ width: '50rem' }} >
+      <Card style={{ width: '20rem' }} >
         <Card.Img variant="top" src="holder.js/100px180" alt=""/>
         <Card.Body>
           <Card.Title>Kya Edmeade</Card.Title>
@@ -54,9 +55,11 @@ function About() {
         </Card.Body>
       </Card>
   
+      </Row>
+      
+      <Row>
 
-  
-  <Card style={{ width: '50rem' }} >
+  <Card style={{ width: '20rem' }} >
         <Card.Img variant="top" src="holder.js/100px180" alt=""/>
         <Card.Body>
           <Card.Title>Tashfeen Arshad</Card.Title>
@@ -71,7 +74,7 @@ function About() {
         </Card.Body>
       </Card>
 
-      <Card style={{ width: '50rem' }} >
+      <Card style={{ width: '20rem' }} >
         <Card.Img variant="top" src="holder.js/100px180" alt=""/>
         <Card.Body>
           <Card.Title>Syed Zaidi</Card.Title>
@@ -88,7 +91,7 @@ function About() {
       
   
 
-  <Card style={{ width: '50em' }} >
+  <Card style={{ width: '20em' }} >
         <Card.Img variant="top" src="holder.js/100px180" alt=""/>
         <Card.Body>
           <Card.Title>Scrum</Card.Title>
@@ -98,7 +101,7 @@ function About() {
           <a href='' target="_blank" rel="noopener noreferrer"><Button variant="primary">Scrum.org</Button></a>
         </Card.Body>
     </Card>
-
+    </Row>
 
     </>);}
   export default About;
