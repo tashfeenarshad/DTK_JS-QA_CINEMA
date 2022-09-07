@@ -88,6 +88,17 @@ function About() {
       
   </CardGroup>
 
+  <Card style={{ width: '70em' }} >
+        <Card.Img variant="top" src="holder.js/100px180" alt=""/>
+        <Card.Body>
+          <Card.Title>Scrum</Card.Title>
+          <Card.Text>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ut illo eaque perferendis sequi recusandae debitis excepturi amet! Harum similique illum veniam ratione eius. Excepturi nesciunt culpa placeat repellendus rem!
+          </Card.Text>
+          <a href='' target="_blank" rel="noopener noreferrer"><Button variant="primary">Scrum.org</Button></a>
+        </Card.Body>
+    </Card>
+
 
     </>);}
   export default About;
