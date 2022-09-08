@@ -1,4 +1,4 @@
-use cinema;
+use cinema
 
 db.createCollection("bookings");
 
@@ -9,7 +9,6 @@ db.bookings.insertMany([
         "adultTickets" : 2,
         "childrenTickets" : 2,
         "price" : 32.99,
-        "date" : 07/09/2022 09:39
         "movieBooking" : [{
             "movie" : "Avatar",
             "day" : "Tuesday",

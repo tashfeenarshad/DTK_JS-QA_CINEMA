@@ -1,4 +1,4 @@
-use cinema;
+use cinema
 
 db.createCollection("movies");
 
@@ -7,7 +7,7 @@ db.movies.insertMany([
         "title": "Avatar",
         "year": "2009",
         "rated": "PG-13",
-        "released": "18 Dec 2009",
+        "released": new Date("2009-12-18"),
         "runtime": "162 min",
         "genre": "Action, Adventure, Fantasy",
         "director": "James Cameron",
@@ -25,7 +25,7 @@ db.movies.insertMany([
         "title": "I Am Legend",
         "year": "2007",
         "rated": "PG-13",
-        "released": "14 Dec 2007",
+        "released": new Date("2007-12-14"),
         "runtime": "101 min",
         "genre": "Drama, Horror, Sci-Fi",
         "director": "Francis Lawrence",
@@ -43,7 +43,7 @@ db.movies.insertMany([
         "title": "300",
         "year": "2006",
         "rated": "R",
-        "released": "09 Mar 2007",
+        "released": new Date("2007-03-09"),
         "runtime": "117 min",
         "genre": "Action, Drama, Fantasy",
         "director": "Zack Snyder",
@@ -61,7 +61,7 @@ db.movies.insertMany([
         "title": "The Avengers",
         "year": "2012",
         "rated": "PG-13",
-        "released": "04 May 2012",
+        "released": new Date("2012-05-04"),
         "runtime": "143 min",
         "genre": "Action, Sci-Fi, Thriller",
         "director": "Joss Whedon",
@@ -79,7 +79,7 @@ db.movies.insertMany([
         "title": "The Wolf of Wall Street",
         "year": "2013",
         "rated": "R",
-        "released": "25 Dec 2013",
+        "released": new Date("2013-12-25"),
         "runtime": "180 min",
         "genre": "Biography, Comedy, Crime",
         "director": "Martin Scorsese",
@@ -92,5 +92,55 @@ db.movies.insertMany([
                 "times" : ["13:00", "15:00", "18:00"]
             }
         ]
+    },
+    {
+        "title": "Avatar: The Way Of The Water",
+        "year": "2022",
+        "released": new Date("2022-12-16"),
+        "genre": "Action, Fantasy, Science Fiction",
+        "director": "James Cameron",
+        "actors": "Kate Winslet, Giovanni Ribisi, Stephen Lang, Cliff Curtis, Sam Worthington, Oona Chaplin",
+        "plot": "Set more than a decade after the events of the first film, AVATAR 2 begins to tell the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive and the tragedies they endure.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMWFmYmRiYzMtMTQ4YS00NjA5LTliYTgtMmM3OTc4OGY3MTFkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg",
+    },
+    {
+        "title": "Black Panther: Wakanda Forever",
+        "year": "2022",
+        "released": new Date("2022-11-11"),
+        "genre": "Action, Drama, Science Fiction",
+        "director": "Ryan Coogler",
+        "actors": "Lupita Nyong'o, Tenoch Huerta, Martin Freeman, Winston Duke, Michaela Coel",
+        "plot": "Wakanda fight to protect their nation from intervening world powers in the wake of King T’Challa’s death. As the Wakandans strive to embrace their next chapter, the heroes must band together and forge a new path for the kingdom of Wakanda.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNjMxZmI4NzEtYWNjOS00M2MwLWE4YTctMjk1YWEzOTY1NjkwXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg",
+    },
+    {
+        "title": "Black Adam",
+        "year": "2022",
+        "released": new Date("2022-10-21"),
+        "genre": "Action, Sci-Fi",
+        "director": "Jaume Collet-Serra",
+        "actors": "Dwayne Johnson, Sarah Shahi, Mohammed Amer",
+        "plot": "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods-and imprisoned just as quickly-Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNmEwODNmOTYtMWRmYS00ZTEzLWJmNTAtMWQ4OWVlMzU0MWIyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
+    },
+    {
+        "title": "Ticket to Paradise",
+        "year": "2022",
+        "released": new Date("2022-09-21"),
+        "genre": "Comedy, Romance",
+        "director": "Ol Parker",
+        "actors": "Lucas Bravo, Kaitlyn Dever, Julia Roberts, George Clooney, Billie Lourd",
+        "plot": "A divorced couple that teams up and travels to Bali to stop their daughter from making the same mistake they think they made 25 years ago.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMWE0MmEwMWUtZjRjOC00YzE3LWI2MjctNjc3NWQ0YTVmNDQ4XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg",
+    },
+    {
+        "title": "Inu-Oh (Subbed)",
+        "year": "2022",
+        "released": new Date("2022-09-28"),
+        "genre": "Animation, Musical",
+        "director": "Masaaki Yuasa",
+        "actors": "Avu-chan(voice), Mirai Moriyama(voice), Tasuku Emoto(voice)",
+        "plot": "A cursed dancer and a musician stun society with electrifying concerts in this animated rock opera.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTk5MDA1ZTQtMGZlMi00OTJmLThlZjEtMjNlZmFkYWRiNmY5XkEyXkFqcGdeQXVyMTY3OTcwMzk@._V1_.jpg",
     }
 ])
