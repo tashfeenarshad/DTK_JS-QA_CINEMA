@@ -5,9 +5,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(https://static.vecteezy.com/system/resources/previews/007/588/893/non_2x/abstract-navy-blue-watercolor-texture-background-grunge-watercolor-paint-splash-and-stains-in-elegant-dark-blue-free-photo.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  padding-bottom: 2em;
+  color: #EAEAE0 !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#footer{
+  margin-top: 20px;
+  width: 100%;
 }

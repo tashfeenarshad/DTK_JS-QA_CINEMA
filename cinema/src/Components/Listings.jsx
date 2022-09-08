@@ -15,7 +15,7 @@ const Listings = () => {
 
 
   useEffect(() => {
-    axios.get("http://localhost:5015/movie/getAll")
+    axios.get("http://localhost:5015/movie/getAllCurrent")
       .then((res) => {
         setItems(res.data);
         setIsLoaded(true);
@@ -35,7 +35,7 @@ const Listings = () => {
 
       <div id="film-container" style={{ display: "flex" }}>
         {items.map((item) =>
-          <Card style={{ width: '18rem', margin: "10px" }} key={item._id} text={"white"} bg={"dark"}>
+          <Card style={{ width: '18rem', margin: "10px" }} key={item._id} text={"black"} bg={"dark"}>
             <Card.Img variant="top" src={item.poster} />
             <Card.Body>
               <Card.Title>{item.title}</Card.Title>

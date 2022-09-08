@@ -12,6 +12,24 @@ router.get("/getAll", (req, res) => {
     });
 });
 
+router.get("/getAllCurrent", (req, res) => {
+
+    Movie.find({ released : { $lte: new Date() } }, (err, result) => {
+        if (err) res.send(err);
+        res.status(200).send(result);
+    })
+
+});
+
+router.get("/getAllNew", (req, res) => {
+
+    Movie.find({ released: { $gt: new Date() } }, (err, result) => {
+        if (err) res.send(err);
+        res.status(200).send(result);
+    })
+
+});
+
 router.get("/get/:id", (req, res) => {
 
     Movie.findById(req.params.id, (err, result) => {
@@ -29,16 +47,16 @@ router.post("/create", (req, res) => {
 
 router.put("/update/:id", (req, res) => {
 
-    Movie.findByIdAndUpdate({_id: req.params.id}, req.body, (err, result) => {
-        if (err)res.send(err);
+    Movie.findByIdAndUpdate({ _id: req.params.id }, req.body, (err, result) => {
+        if (err) res.send(err);
         res.status(202).send(`Updated Movie ${req.body.title}`);
     });
 
 });
 
 router.delete("/delete/:id", (req, res) => {
-    Movie.findByIdAndDelete({_id: req.params.id}, (err, result) => {
-        if (err)res.send(err);
+    Movie.findByIdAndDelete({ _id: req.params.id }, (err, result) => {
+        if (err) res.send(err);
         res.status(204).send(`Deleted Movie with ID : ${req.params.id}`);
     });
 

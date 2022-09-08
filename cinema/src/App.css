@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.card{
+  color: #282c34;
+  background-image: url(https://st2.depositphotos.com/14560930/42191/i/450/depositphotos_421917918-stock-photo-ivory-beige-marble-texture-background.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  padding-bottom: 2em;
+}
+
