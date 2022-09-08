@@ -2,48 +2,103 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import { useEffect, useState } from 'react';
-  
+import 'react-date-picker/dist/DatePicker.css';
+import DatePicker from 'react-date-picker';
+import { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import VueMonthlyPicker from 'vue-monthly-picker'
+
+
 
 export default function Bookings() {
-  const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-  const [days, setDays] = useState([]);
-  const [date, setDate] = useState(new Date());
-  const [times, setTimes] = useState([]);
-  const [selectedMovie, setSelectedMovie] = useState("Movies");
-  const [openModal, setOpenModal] = useState(false)
-
-  const changeDate = (date) => {
-    setDate(date);
-};
-
+  
+  
+  const [value, onChange] = useState(new Date());
+ 
 
   
-    return (
-      <Form>
+
+const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  return (
+    <>   
+    
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Payment</Modal.Title>
+        </Modal.Header>
+        <Modal.Body><Form>
         <Row className="mb-3">
-          <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label>First Name</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+          <Form.Group as={Col} controlId="formGridText">
+            <Form.Label>Name on card</Form.Label>
+            <Form.Control type="text" placeholder="Cardholder Name" />
           </Form.Group>
   
-          <Form.Group as={Col} controlId="formGridPassword">
-            <Form.Label>Last Name</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
+          <Form.Group as={Col} controlId="formGridText">
+            <Form.Label>Card Number</Form.Label>
+            <Form.Control type="Number" placeholder="Card Number" />
           </Form.Group>
         </Row>
   
-        <Form.Group className="mb-3" controlId="formGridAddress1">
-          <Form.Label>Film</Form.Label>
-          <Form.Control placeholder="1234 Main St" />
+        <Form.Group className="mb-3" controlId="formGridDate">
+          <Form.Label>Expiry</Form.Label>
+          <Form.Control type ="expiry" placeholder="MM/YY" />
+        </Form.Group>
+
+        
+        
+  
+        <Form.Group className="mb-3" controlId="formGridNumber">
+          <Form.Label>CVV</Form.Label>
+          <Form.Control type="number" placeholder="CVV" />
         </Form.Group>
   
-        <Form.Group className="mb-3" controlId="formGridAddress2">
+        
+  
+        
+  
+        <Button variant="primary" type="submit" onClick={handleShow}>
+          Submit
+        </Button>
+      </Form></Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    
+  
+    
+      <Form>
+        <Row className="mb-3">
+          <Form.Group as={Col} controlId="formGridText">
+            <Form.Label>First Name</Form.Label>
+            <Form.Control type="text" placeholder="First Name" />
+          </Form.Group>
+  
+          <Form.Group as={Col} controlId="formGridText">
+            <Form.Label>Last Name</Form.Label>
+            <Form.Control type="text" placeholder="Last Name" />
+          </Form.Group>
+        </Row>
+  
+        <Form.Group className="mb-3" controlId="formGridState">
+          <Form.Label>Film</Form.Label>
+          <Form.Control placeholder="Film" />
+        </Form.Group>
+  
+        <Form.Group className="mb-3" controlId="formGridTime">
           <Form.Label>Time</Form.Label>
-          <Form.Control placeholder="Apartment, studio, or floor" />
+          <Form.Control placeholder="Time" />
         </Form.Group>
   
         <Row className="mb-3">
@@ -100,21 +155,19 @@ export default function Bookings() {
   
           
         </Row>
+        <Form.Group className="mb-3" controlId="formGridState">
+        <DatePicker id="datePicker" onChange={onChange} value={value} format='dd-MM-y'/>
+        </Form.Group>
+        
+
+                
+        
   
-        <div>
-                    <h5 style={{ fontWeight: 'bold' }}>Select a Date</h5>
-                    <Calendar
-                        minDate={new Date()}
-                        onChange={changeDate}
-                        value={date}
-                        tileDisabled={({ date }) => !days.includes(date.getDay())}
-                    />
-                </div>
-  
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" onMouseDown={handleShow}>
           Submit
         </Button>
-      </Form>
+      </Form></>
+
     );
   }
   

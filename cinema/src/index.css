@@ -21,3 +21,7 @@ code {
   margin-top: 20px;
   width: 100%;
 }
+#datePicker{
+  background-color: antiquewhite;
+  color: antiquewhite;
+}
