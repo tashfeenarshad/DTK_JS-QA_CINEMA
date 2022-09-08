@@ -4,13 +4,15 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
+import Logo from './Images/logo.jpg';
 
 function Navigation() {
   return (
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
-        <Navbar.Brand href="/">Home</Navbar.Brand>
+        <a href="/"target="_blank" rel="noreferrer"><img src={Logo} width="120px" /></a>
+        {/* <Navbar.Brand href="/">Home</Navbar.Brand> */}
           <Nav className="me-auto">
             <Nav.Link href="/listings">Listings</Nav.Link>
             <Nav.Link href="/bookings">Bookings</Nav.Link>
