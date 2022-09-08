@@ -20,7 +20,7 @@ export default function PlacesToGo() {
               <h3>Tower of London</h3>
               <p>Centuries of bloody history around a medieval castle, home to Crown Jewels</p>
               <p>OFFER: 10% off booking online using code: CINE</p>
-              <p>https://www.hrp.org.uk/tower-of-london/</p>
+              <a href="https://www.hrp.org.uk/tower-of-london/"target="_blank" rel="noreferrer"><p>https://www.hrp.org.uk/tower-of-london/</p></a>
             </div>
           </Carousel.Caption>
         </Carousel.Item>
@@ -36,7 +36,7 @@ export default function PlacesToGo() {
             <h3>Slug And Lettuce Tower Bridge</h3>
             <p>Smart bar chain with a cocktail list, a menu of global classics, and contemporary decor.</p>
             <p>OFFER: 10% off booking online using code: CINE</p>
-            <p>https://www.slugandlettuce.co.uk/towerbridge/</p>
+            <a href="https://www.slugandlettuce.co.uk/towerbridge/"target="_blank" rel="noreferrer"><p>https://www.slugandlettuce.co.uk/towerbridge/</p></a>
           </div>
           </Carousel.Caption>
         </Carousel.Item>
@@ -52,7 +52,7 @@ export default function PlacesToGo() {
             <h3>Kilikya's Gastro, Cocktails, Lounge</h3>
             <p>Modern cafe/restaurant with a deli-style display counter and a menu of Turkish classics and more.</p>
             <p>OFFER: 10% off booking online using code: CINE</p>
-            <p>https://www.kilikyasgastro.co.uk/</p>
+            <a href="https://www.kilikyasgastro.co.uk/"target="_blank" rel="noreferrer"><p>https://www.kilikyasgastro.co.uk/</p></a>
           </div>
           </Carousel.Caption>
         </Carousel.Item>
