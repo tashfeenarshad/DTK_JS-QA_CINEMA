@@ -15,7 +15,7 @@ const Listings = () => {
 
 
   useEffect(() => {
-    axios.get("http://localhost:5015/movie/getAll")
+    axios.get("http://localhost:5015/movie/getAllCurrent")
       .then((res) => {
         setItems(res.data);
         setIsLoaded(true);
