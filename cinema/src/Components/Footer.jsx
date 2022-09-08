@@ -2,8 +2,8 @@ import Nav from 'react-bootstrap/Nav';
 
 function Footer(){
     return(
-        <div>
-        <Nav className="justify-content-center" activeKey="/">
+        <div id="footer" style={{backgroundColor: "#1DC690", color: "#1C4670", fontWeight: 'bold'}}>
+        <Nav className="justify-content-center" activeKey="/" >
             <Nav.Item>
             <Nav.Link href="/">Home</Nav.Link>
             </Nav.Item>
