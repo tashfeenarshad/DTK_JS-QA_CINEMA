@@ -11,7 +11,7 @@ function Navigation() {
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
-        <a href="/"target="_blank" rel="noreferrer"><img src={Logo} width="120px" /></a>
+        <Navbar.Brand href="/">< img src={Logo} width="120px" ></img></Navbar.Brand>
         {/* <Navbar.Brand href="/">Home</Navbar.Brand> */}
           <Nav className="me-auto">
             <Nav.Link href="/listings">Listings</Nav.Link>
