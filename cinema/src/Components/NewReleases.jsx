@@ -4,14 +4,15 @@ import React from "react";
 import { Outlet } from 'react-router-dom';
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
+import Popup from "./Popup.jsx";
 
 const NewReleases = () => {
 
   const [items, setItems] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
-
-
+  const [buttonPopup, setButtonPopup] = useState(false);
+  const [trailerUrl, setTrailerUrl] = useState();
 
   useEffect(() => {
     axios.get("http://localhost:5015/movie/getAllNew")
@@ -21,9 +22,9 @@ const NewReleases = () => {
         console.log(res.data);
       }).catch((err) => {
         console.log(err.message);
-
       })
   }, [])
+
 
   if (error) {
     return <div>Error: {error.message}</div>
@@ -42,12 +43,18 @@ const NewReleases = () => {
                 {item.plot}
               </Card.Text>
             </Card.Body>
-            <ListGroup class="list-group list-group-flush">
+            <ListGroup className="list-group list-group-flush">
+              <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Coming: </b> {(new Date(item.released).getUTCDate().toString())}
+                    /{(new Date(item.released).getUTCMonth().toString())}/{(new Date(item.released).getUTCFullYear().toString())}</ListGroup.Item>
               <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Genre: </b> {item.genre}</ListGroup.Item>
               <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Director: </b>{item.director}</ListGroup.Item>
               <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Actors: </b>{item.actors}</ListGroup.Item>
+              <ListGroup.Item>
+                <button onClick={() => {setButtonPopup(true); setTrailerUrl(item.trailer);}}>Trailer</button>
+              </ListGroup.Item>
             </ListGroup>
           </Card>)}
+          <Popup trigger={buttonPopup} setTrigger={setButtonPopup} trailerVideo={ (trailerUrl) ? (trailerUrl) : ("https://www.youtube.com/embed/i8fAO_zyFAM")}> </Popup>
       </div>
     )
   }

@@ -43,7 +43,7 @@ const Listings = () => {
                 {item.plot}
               </Card.Text>
             </Card.Body>
-            <ListGroup class="list-group list-group-flush">
+            <ListGroup className="list-group list-group-flush">
               <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Genre: </b> {item.genre}</ListGroup.Item>
               <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Runtime: </b>{item.runtime}</ListGroup.Item>
               <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Rated: </b>{item.rated}</ListGroup.Item>
