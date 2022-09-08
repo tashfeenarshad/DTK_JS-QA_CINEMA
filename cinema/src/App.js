@@ -14,7 +14,8 @@ import NewReleases from './Components/NewReleases';
 import OpeningTimes from './Components/OpeningTimes';
 import PlacesToGo from './Components/PlacesToGo';
 import Screens from './Components/Screens';
-//import SearchBar from './Components/SearchBar';
+import SearchBar from './Components/SearchBar';
+import movieData from './Components/data/movie.json';
 
 
 // As you work add imports to components used
@@ -25,8 +26,10 @@ function App() {
   return (
   <>
     <Navigation />
-    {/* <Header /> */}
-    {/* <Searchbar /> */}
+    <div className="App">
+      <SearchBar placeholder="Enter a Movie Name..." data={movieData} />
+    </div>
+  
     
     <div className="container">
         <Routes>
