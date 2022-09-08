@@ -1,4 +1,4 @@
-use cinema;
+use cinema
 
 db.createCollection("discussions");
 
