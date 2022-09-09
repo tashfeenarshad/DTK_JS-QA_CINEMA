@@ -5,12 +5,15 @@ import { Outlet } from 'react-router-dom';
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from 'react-bootstrap/Button';
+import Popup from "./Popup";
 
 const Listings = () => {
 
   const [items, setItems] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
+  const [buttonPopup, setButtonPopup] = useState(false);
+  const [trailerUrl, setTrailerUrl] = useState();
 
 
 
@@ -43,7 +46,7 @@ const Listings = () => {
                 {item.plot}
               </Card.Text>
             </Card.Body>
-            <ListGroup class="list-group list-group-flush">
+            <ListGroup className="list-group list-group-flush">
               <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Genre: </b> {item.genre}</ListGroup.Item>
               <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Runtime: </b>{item.runtime}</ListGroup.Item>
               <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Rated: </b>{item.rated}</ListGroup.Item>
@@ -56,9 +59,11 @@ const Listings = () => {
                 <b>At:</b> {showtimes.times.join(" ")}
                 </ListGroup.Item>
               )}
+              <Button variant="warning" onClick={() => {setButtonPopup(true); setTrailerUrl(item.trailer);}}>Trailer</Button>
             </ListGroup>
             <Button variant="success" href="/bookings">Book a ticket</Button>{' '}
           </Card>)}
+          <Popup trigger={buttonPopup} setTrigger={setButtonPopup} trailerVideo={(trailerUrl)}> </Popup>
       </div>
     )
   }

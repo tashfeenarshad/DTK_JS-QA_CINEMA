@@ -18,18 +18,12 @@ const movieSchema = new Schema({
         type : String,
         required : true
     },
-    rated: {
-        type : String,
-        required : true
-    },
+    rated : String,
     released: {
         type : Date,
         required : true
     },
-    runtime: {
-        type : String,
-        required : true
-    },
+    runtime : String,
     genre: {
         type : String,
         required : true
@@ -49,7 +43,9 @@ const movieSchema = new Schema({
         type : String,
         required : true
     },
-    showtime : [showtimeSchema]
+    showtime : [showtimeSchema],
+    trailer : String
+    
 
 });
 
