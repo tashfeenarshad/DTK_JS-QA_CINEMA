@@ -15,7 +15,7 @@ function About() {
           <Card.Title>Damian Poclitar</Card.Title>
           <Card.Text>
             <h6>Contact Details</h6>
-              <a href='mailto:' target="_blank" rel="noopener noreferrer"><Button variant="primary">Email</Button></a> 
+              <a href='/contact' target="_blank" rel="noopener noreferrer"><Button variant="primary">Email</Button></a> 
           </Card.Text>
           <Card.Text>
               <a href='https://www.linkedin.com/in/damianpoclitar/' target="_blank" rel="noopener noreferrer"><Button variant="primary">LinkedIn</Button></a>
@@ -30,7 +30,7 @@ function About() {
           <Card.Title>Jariful Hoque</Card.Title>
           <Card.Text>
             <h6>Contact Details</h6>
-              <a href='mailto:' target="_blank" rel="noopener noreferrer"><Button variant="primary">Email</Button></a> 
+              <a href='/contact' target="_blank" rel="noopener noreferrer"><Button variant="primary">Email</Button></a> 
           </Card.Text>
           <Card.Text>
               <a href='https://www.linkedin.com/in/jarif-hoque/' target="_blank" rel="noopener noreferrer"><Button variant="primary">LinkedIn</Button></a>
@@ -45,7 +45,7 @@ function About() {
           <Card.Title>Kya Edmeade</Card.Title>
           <Card.Text>
             <h6>Contact Details</h6>
-              <a href='mailto:' target="_blank" rel="noopener noreferrer"><Button variant="primary">Email</Button></a> 
+              <a href='/contact' target="_blank" rel="noopener noreferrer"><Button variant="primary">Email</Button></a> 
           </Card.Text>
           <Card.Text>
               <a href='https://www.linkedin.com/in/kya-edmeade/' target="_blank" rel="noopener noreferrer"><Button variant="primary">LinkedIn</Button></a>
@@ -62,7 +62,7 @@ function About() {
           <Card.Title>Tashfeen Arshad</Card.Title>
           <Card.Text>
             <h6>Contact Details</h6>
-              <a href='mailto:' target="_blank" rel="noopener noreferrer"><Button variant="primary">Email</Button></a> 
+              <a href='/contact' target="_blank" rel="noopener noreferrer"><Button variant="primary">Email</Button></a> 
           </Card.Text>
           <Card.Text>
               <a href=''target="_blank" rel="noopener noreferrer"><Button variant="primary">LinkedIn</Button></a>
@@ -77,7 +77,7 @@ function About() {
           <Card.Title>Syed Zaidi</Card.Title>
           <Card.Text>
             <h6>Contact Details</h6>
-              <a href='mailto:' target="_blank" rel="noopener noreferrer"><Button variant="primary">Email</Button></a> 
+              <a href='/contact' target="_blank" rel="noopener noreferrer"><Button variant="primary">Email</Button></a> 
           </Card.Text>
           <Card.Text>
               <a href='https://www.linkedin.com/in/syed-namvar-zaidi/' target="_blank" rel="noopener noreferrer"><Button variant="primary">LinkedIn</Button></a>
