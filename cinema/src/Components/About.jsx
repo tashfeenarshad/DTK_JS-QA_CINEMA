@@ -104,7 +104,7 @@ function About() {
            
           <p>Within sprints, user stores are created to track the creation of individual components. User stories are three line stories told from the perspective of the individual which outline the needs. User stories are prioritised so each team member knows where to focus their time.  </p>
 
-          <p>The team made use of scrum methodology, as well a kanban board to create and track the user stories and tasks required for the building of this site. With each componet borken down into an idinviidual task it helped streamline and focus the process, such that components were built in tandem rather than sequentially.</p>
+          <p>The team made use of scrum methodology, as well a kanban board to create and track the user stories and tasks required for the building of this site. With each componet broken down into an individual task it helped streamline and focus the process, such that components were built in tandem rather than sequentially.</p>
 
               
           </Card.Text>
