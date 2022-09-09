@@ -5,6 +5,7 @@ import { Outlet } from 'react-router-dom';
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Popup from "./Popup.jsx";
+import Button from "react-bootstrap/Button";
 
 const NewReleases = () => {
 
@@ -49,12 +50,10 @@ const NewReleases = () => {
               <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Genre: </b> {item.genre}</ListGroup.Item>
               <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Director: </b>{item.director}</ListGroup.Item>
               <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Actors: </b>{item.actors}</ListGroup.Item>
-              <ListGroup.Item>
-                <button onClick={() => {setButtonPopup(true); setTrailerUrl(item.trailer);}}>Trailer</button>
-              </ListGroup.Item>
+              <Button variant="warning" onClick={() => {setButtonPopup(true); setTrailerUrl(item.trailer);}}>Trailer</Button>
             </ListGroup>
           </Card>)}
-          <Popup trigger={buttonPopup} setTrigger={setButtonPopup} trailerVideo={ (trailerUrl) ? (trailerUrl) : ("https://www.youtube.com/embed/i8fAO_zyFAM")}> </Popup>
+          <Popup trigger={buttonPopup} setTrigger={setButtonPopup} trailerVideo={(trailerUrl)}> </Popup>
       </div>
     )
   }
