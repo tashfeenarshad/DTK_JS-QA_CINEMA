@@ -74,3 +74,8 @@
   right: 16px;
 }
 
+/* Datepicker */
+.react-date-picker__wrapper {
+  background: white;
+  color: black;
+}
