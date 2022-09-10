@@ -8,6 +8,7 @@ db.bookings.insertMany([
         "lastName" : "Smith",
         "adultTickets" : 2,
         "childrenTickets" : 2,
+        "concession" : 2,
         "price" : 32.99,
         "movieBooking" : [{
             "movie" : "Avatar",
@@ -17,7 +18,7 @@ db.bookings.insertMany([
         "payment" : [{
             "cardNumber" : 1234567890987654,
             "expiringDate" : "12/27",
-            "cvc" : 123
+            "cvv" : 123
         }]
     }
 ])
