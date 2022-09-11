@@ -20,6 +20,7 @@ import Screens from './Components/Screens';
 // As you work add imports to components used
 
 import { Routes, Route } from "react-router-dom";
+import BookingConfirmation from './Components/BookingConfirmation';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path="/openingtimes" element={<OpeningTimes />} />
           <Route path="/placestogo" element={<PlacesToGo />} />
           <Route path="/screens" element={<Screens />} />
+          <Route path="/bookingConfirmation" element={<BookingConfirmation />} />
         </Routes>
       <Footer />
     </div>
