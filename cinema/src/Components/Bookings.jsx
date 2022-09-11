@@ -7,10 +7,13 @@ import 'react-date-picker/dist/DatePicker.css';
 import { useEffect, useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Bookings = () => {
+
+  let navigate = useNavigate();
 
 
   const [show, setShow] = useState(false);
@@ -30,46 +33,42 @@ const Bookings = () => {
   const [expiringDate, setExpiringDate] = useState();
   const [cvv, setCvv] = useState();
 
-  const handleClose = () => {
-
-
+  const handleSubmit = () => {
 
     let price = (adultTickets * 5 + childrenTickets * 2 + concession * 3)
 
-    setShow(false)
-
-  
-
     const bookingInfo = {
-      firstName : firstName,
-      lastName : lastName,
-      adultTickets : adultTickets,
-      childrenTickets : childrenTickets,
-      concession : concession,
-      price : price,
-      movieBooking : [{
-        movie : movie,
-        day : day,
-        time : time
+      firstName: firstName,
+      lastName: lastName,
+      adultTickets: adultTickets,
+      childrenTickets: childrenTickets,
+      concession: concession,
+      price: price,
+      movieBooking: [{
+        movie: movie,
+        day: day,
+        time: time
       }],
-      payment : [{
-        cardNumber : cardNumber,
-        expiringDate : expiringDate,
-        cvv : cvv
+      payment: [{
+        cardNumber: cardNumber,
+        expiringDate: expiringDate,
+        cvv: cvv
       }]
     }
 
     axios.post("http://localhost:5015/booking/create", bookingInfo)
       .then((res) => {
         console.log(res.data._id + " created")
+        navigate("/bookingConfirmation", {state: res.data});
       }).catch((err) => {
         console.log(err.message)
       })
 
-    console.log(bookingInfo);
-
 
   };
+
+
+  const handleClose = () => setShow(false)
   const handleShow = () => setShow(true);
 
   useEffect(() => {
@@ -95,7 +94,7 @@ const Bookings = () => {
       }).catch((err) => {
         console.log(err.message);
       })
-    
+
   }
 
 
@@ -109,18 +108,18 @@ const Bookings = () => {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridText">
               <Form.Label>Name on card</Form.Label>
-              <Form.Control type="text" placeholder="Cardholder Name"/>
+              <Form.Control type="text" placeholder="Cardholder Name" />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridText">
               <Form.Label>Card Number</Form.Label>
-              <Form.Control type="Number" placeholder="Card Number" onChange = {(e) => {setCardNumber(e.target.value)}}/>
+              <Form.Control type="Number" placeholder="Card Number" onChange={(e) => { setCardNumber(e.target.value) }} />
             </Form.Group>
           </Row>
 
           <Form.Group className="mb-3" controlId="formGridDate">
             <Form.Label>Expiry</Form.Label>
-            <Form.Control type="expiry" placeholder="MM/YY" onChange = {(e) => {setExpiringDate(e.target.value)}}/>
+            <Form.Control type="expiry" placeholder="MM/YY" onChange={(e) => { setExpiringDate(e.target.value) }} />
           </Form.Group>
 
 
@@ -128,7 +127,7 @@ const Bookings = () => {
 
           <Form.Group className="mb-3" controlId="formGridNumber">
             <Form.Label>CVV</Form.Label>
-            <Form.Control type="number" placeholder="CVV" onChange = {(e) => {setCvv(e.target.value)}}/>
+            <Form.Control type="number" placeholder="CVV" onChange={(e) => { setCvv(e.target.value) }} />
           </Form.Group>
 
 
@@ -136,11 +135,11 @@ const Bookings = () => {
 
         </Form></Modal.Body>
         <Modal.Footer>
-          Your total is {adultTickets * 5 + childrenTickets * 2 + concession * 3}
+          Your total is £{adultTickets * 5 + childrenTickets * 2 + concession * 3}
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={handleSubmit}>
             Submit
           </Button>
         </Modal.Footer>
@@ -152,29 +151,29 @@ const Bookings = () => {
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridText">
             <Form.Label>First Name</Form.Label>
-            <Form.Control type="text" placeholder="First Name" onChange={(e) => {setFirstName(e.target.value)}}/>
+            <Form.Control type="text" placeholder="First Name" onChange={(e) => { setFirstName(e.target.value) }} />
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridText">
             <Form.Label>Last Name</Form.Label>
-            <Form.Control type="text" placeholder="Last Name" onChange={(e) => {setLastName(e.target.value)}}/>
+            <Form.Control type="text" placeholder="Last Name" onChange={(e) => { setLastName(e.target.value) }} />
           </Form.Group>
         </Row>
 
         <Form.Group className="mb-3" controlId="formGridState">
           <Form.Label>Film</Form.Label>
-          <Form.Select defaultValue="Choose..." onChange = {changeHandler}>
-              {(items == null) ? (<option>Choose a movie</option>) : 
+          <Form.Select defaultValue="Choose..." onChange={changeHandler}>
+            {(items == null) ? (<option>Choose a movie</option>) :
               (items.map((item) =>
                 <option key={item._id} id={item._id}>{item.title}</option>
               ))}
-            </Form.Select>
+          </Form.Select>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formGridTime">
           <Form.Label>Time</Form.Label>
-          <Form.Select defaultValue="Choose..." onChange = {(e) => {setDay(e.target.value)}}>
-              {(showingDays == null) ? (<option>Choose a day</option>) : 
+          <Form.Select defaultValue="Choose..." onChange={(e) => { setDay(e.target.value) }}>
+            {(showingDays == null) ? (<option>Choose a day</option>) :
               (showingDays.map((days, i) =>
                 <option key={i}>{days}</option>)
               )}
@@ -183,8 +182,8 @@ const Bookings = () => {
 
         <Form.Group className="mb-3" controlId="formGridTime">
           <Form.Label>Time</Form.Label>
-          <Form.Select defaultValue="Choose..." onChange = {(e) => {setTime(e.target.value)}}>
-              {(showingTimes == null) ? (<option>Choose a time</option>) : 
+          <Form.Select defaultValue="Choose..." onChange={(e) => { setTime(e.target.value) }}>
+            {(showingTimes == null) ? (<option>Choose a time</option>) :
               (showingTimes.map((times, i) =>
                 <option key={i}>{times}</option>)
               )}
@@ -196,7 +195,7 @@ const Bookings = () => {
 
           <Form.Group as={Col} controlId="formGridState">
             <Form.Label>Adult</Form.Label>
-            <Form.Select defaultValue="Choose..." onChange = {(e) => {setAdultTickets(e.target.value)}}>
+            <Form.Select defaultValue="Choose..." onChange={(e) => { setAdultTickets(e.target.value) }}>
               <option>Choose...</option>
               <option>1</option>
               <option>2</option>
@@ -212,7 +211,7 @@ const Bookings = () => {
           </Form.Group>
           <Form.Group as={Col} controlId="formGridState">
             <Form.Label>Child</Form.Label>
-            <Form.Select defaultValue="Choose..." onChange = {(e) => {setChildrenTickets(e.target.value)}}>
+            <Form.Select defaultValue="Choose..." onChange={(e) => { setChildrenTickets(e.target.value) }}>
               <option>Choose...</option>
               <option>1</option>
               <option>2</option>
@@ -228,7 +227,7 @@ const Bookings = () => {
           </Form.Group>
           <Form.Group as={Col} controlId="formGridState">
             <Form.Label>Concession</Form.Label>
-            <Form.Select defaultValue="Choose..." onChange = {(e) => {setConcession(e.target.value)}}>
+            <Form.Select defaultValue="Choose..." onChange={(e) => { setConcession(e.target.value) }}>
               <option>Choose...</option>
               <option>1</option>
               <option>2</option>

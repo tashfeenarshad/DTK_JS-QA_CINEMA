@@ -52,8 +52,8 @@ const Listings = () => {
               <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Rated: </b>{item.rated}</ListGroup.Item>
               <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Director: </b>{item.director}</ListGroup.Item>
               <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Actors: </b>{item.actors}</ListGroup.Item>
-              {item.showtime.map((showtimes) =>
-                <ListGroup.Item style = {{background : "#212529", color : "#fff"}}>
+              {item.showtime.map((showtimes, i) =>
+                <ListGroup.Item style = {{background : "#212529", color : "#fff"}} key={i}>
                 <b>Showing on:</b> {showtimes.days.join(" ")} 
                 <br></br>
                 <b>At:</b> {showtimes.times.join(" ")}
