@@ -26,7 +26,7 @@ router.get("/get/:id", (req, res) => {
     try {
         Discussion.findById(req.params.id, (err, result) => {
             if (err) {
-                res.send(500).send(err);
+                res.status(500).send(err);
             }
             else if (!result) {
                 res.status(404).send(`No entry wiht ID ${req.params.id} found`);
