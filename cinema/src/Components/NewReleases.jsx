@@ -45,15 +45,14 @@ const NewReleases = () => {
               </Card.Text>
             </Card.Body>
             <ListGroup className="list-group list-group-flush">
-              <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Coming: </b> {(new Date(item.released).getUTCDate().toString())}
-                    /{(new Date(item.released).getUTCMonth().toString())}/{(new Date(item.released).getUTCFullYear().toString())}</ListGroup.Item>
-              <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Genre: </b> {item.genre}</ListGroup.Item>
-              <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Director: </b>{item.director}</ListGroup.Item>
-              <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Actors: </b>{item.actors}</ListGroup.Item>
-              <Button variant="warning" onClick={() => {setButtonPopup(true); setTrailerUrl(item.trailer);}}>Trailer</Button>
+              <ListGroup.Item style={{ background: "#212529", color: "#fff" }}><b>Coming: </b> {new Date(item.released).toUTCString().slice(0, -13)}</ListGroup.Item>
+              <ListGroup.Item style={{ background: "#212529", color: "#fff" }}><b>Genre: </b> {item.genre}</ListGroup.Item>
+              <ListGroup.Item style={{ background: "#212529", color: "#fff" }}><b>Director: </b>{item.director}</ListGroup.Item>
+              <ListGroup.Item style={{ background: "#212529", color: "#fff" }}><b>Actors: </b>{item.actors}</ListGroup.Item>
+              <Button variant="warning" onClick={() => { setButtonPopup(true); setTrailerUrl(item.trailer); }}>Trailer</Button>
             </ListGroup>
           </Card>)}
-          <Popup trigger={buttonPopup} setTrigger={setButtonPopup} trailerVideo={(trailerUrl)}> </Popup>
+        <Popup trigger={buttonPopup} setTrigger={setButtonPopup} trailerVideo={(trailerUrl)}> </Popup>
       </div>
     )
   }
