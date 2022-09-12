@@ -5,42 +5,53 @@ const Discussion = require('../schema/discussionSchema.js');
 
 router.get("/getAll", (req, res) => {
 
-    Discussion.find({}, (err, result) => {
-        if (err) res.send(err);
-        res.status(200).send(result);
-    });
+    try {
+        Discussion.find({}, (err, result) => {
+            if (err) {
+                res.status(500).send(err);
+            }
+            else if (!result) {
+                res.status(404).send(`No entries found in the database`);
+            }
+            res.status(200).send(result);
+        });
+    } catch (err) {
+        res.send(err);
+    }
 });
 
 router.get("/get/:id", (req, res) => {
 
-    Discussion.findById(req.params.id, (err, result) => {
-        if (err) res.send(err);
-        res.status(200).send(result);
-    });
+
+    try {
+        Discussion.findById(req.params.id, (err, result) => {
+            if (err) {
+                res.send(500).send(err);
+            }
+            else if (!result) {
+                res.status(404).send(`No entry wiht ID ${req.params.id} found`);
+            }
+            res.status(200).send(result);
+        });
+    } catch (err) {
+        res.send(err);
+    }
+
+
 });
 
 router.post("/create", (req, res) => {
-    const discussion = new Discussion(req.body);
-    discussion.save().then((result) => {
-        res.status(201).send(`Comment by ${result.name} added`)
-    });
-});
-
-router.put("/update/:id", (req, res) => {
-
-    Discussion.findByIdAndUpdate({_id: req.params.id}, req.body, (err, result) => {
-        if (err)res.send(err);
-        res.status(202).send(`Updated comment by ${req.body.name}`);
-    });
-
-});
-
-router.delete("/delete/:id", (req, res) => {
-    Discussion.findByIdAndDelete({_id: req.params.id}, (err, result) => {
-        if (err)res.send(err);
-        res.status(204).send(`Deleted comment with ID : ${req.params.id}`);
-    });
-
+    try {
+        const discussion = new Discussion(req.body);
+        discussion.save().then((err, result) => {
+            if (err) {
+                res.status(500).send(err);
+            }
+            res.status(201).send(`Comment by ${result.name} added`)
+        });
+    } catch (err) {
+        res.send(err);
+    }
 });
 
 
