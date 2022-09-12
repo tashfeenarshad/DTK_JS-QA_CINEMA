@@ -5,42 +5,47 @@ const Booking = require('../schema/bookingSchema.js');
 
 router.get("/getAll", (req, res) => {
 
-    Booking.find({}, (err, result) => {
-        if (err) res.send(err);
-        res.status(200).send(result);
-    });
+    try {
+        Booking.find({}, (err, result) => {
+            if (err) {
+                res.status(500).send(err);
+            }
+            else if (!result) {
+                res.status(404).status(`No entries found in the database`);
+            }
+            res.status(200).send(result);
+        });
+    } catch (err) {
+        res.send(err);
+    }
 });
 
 router.get("/get/:id", (req, res) => {
 
-    Booking.findById(req.params.id, (err, result) => {
-        if (err) res.send(err);
-        res.status(200).send(result);
-    });
+    try {
+        Booking.findById(req.params.id, (err, result) => {
+            if (err) {
+                res.status(500).send(err);
+            }
+            else if (!result) {
+                res.status(404).send(`No entry with ID ${req.params.id} found`);
+            }
+            res.status(200).send(result);
+        });
+    } catch (err) {
+        res.send(err);
+    }
 });
 
 router.post("/create", (req, res) => {
-    const booking = new Booking(req.body);
-    booking.save().then((result) => {
-        res.status(201).send(result)
-    });
-});
-
-router.put("/update/:id", (req, res) => {
-
-    Booking.findByIdAndUpdate({_id: req.params.id}, req.body, (err, result) => {
-        if (err)res.send(err);
-        res.status(202).send(`Updated Booking ${req.body.title}`);
-    });
-
-});
-
-router.delete("/delete/:id", (req, res) => {
-    Booking.findByIdAndDelete({_id: req.params.id}, (err, result) => {
-        if (err)res.send(err);
-        res.status(204).send(`Deleted Booking with ID : ${req.params.id}`);
-    });
-
+    try {
+        const booking = new Booking(req.body);
+        booking.save().then((result) => {
+            res.status(201).send(result)
+        });
+    } catch (err) {
+        res.send(err);
+    }
 });
 
 
