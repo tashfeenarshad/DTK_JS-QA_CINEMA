@@ -19,7 +19,8 @@ db.movies.insertMany([
                 "days" : ["Monday"],
                 "times" : ["13:00", "15:00", "18:00"]
             }
-        ]
+        ],
+        "trailer": "https://www.youtube.com/embed/5PSNL1qE6VY?autoplay=1"
     },
     {
         "title": "I Am Legend",
@@ -35,9 +36,10 @@ db.movies.insertMany([
         "showtime": [
             {
                 "days" : ["Tuesday"],
-                "times" : ["13:00", "15:00", "18:00"]
+                "times" : ["14:00", "16:00", "19:00"]
             }
-        ]
+        ],
+        "trailer": "https://www.youtube.com/embed/dtKMEAXyPkg?autoplay=1"
     },
     {
         "title": "300",
@@ -53,9 +55,10 @@ db.movies.insertMany([
         "showtime": [
             {
                 "days" : ["Wednesday"],
-                "times" : ["13:00", "15:00", "18:00"]
+                "times" : ["12:00", "14:00", "17:00"]
             }
-        ]
+        ],
+        "trailer": "https://www.youtube.com/embed/UrIbxk7idYA?autoplay=1"
     },
     {
         "title": "The Avengers",
@@ -73,7 +76,8 @@ db.movies.insertMany([
                 "days" : ["Thursday"],
                 "times" : ["13:00", "15:00", "18:00"]
             }
-        ]
+        ],
+        "trailer": "https://www.youtube.com/embed/eOrNdBpGMv8?autoplay=1"
     },
     {
         "title": "The Wolf of Wall Street",
@@ -88,10 +92,11 @@ db.movies.insertMany([
         "poster": "https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_.jpg",
         "showtime": [
             {
-                "days" : ["Friday"],
-                "times" : ["13:00", "15:00", "18:00"]
+                "days" : ["Friday", "Sunday"],
+                "times" : ["13:00", "17:00", "20:00"]
             }
-        ]
+        ],
+        "trailer": "https://www.youtube.com/embed/iszwuX1AK6A?autoplay=1"
     },
     {
         "title": "Avatar: The Way Of The Water",
@@ -102,6 +107,7 @@ db.movies.insertMany([
         "actors": "Kate Winslet, Giovanni Ribisi, Stephen Lang, Cliff Curtis, Sam Worthington, Oona Chaplin",
         "plot": "Set more than a decade after the events of the first film, AVATAR 2 begins to tell the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive and the tragedies they endure.",
         "poster": "https://m.media-amazon.com/images/M/MV5BMWFmYmRiYzMtMTQ4YS00NjA5LTliYTgtMmM3OTc4OGY3MTFkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg",
+        "trailer" : "https://www.youtube.com/embed/NZrX_ES93JA?autoplay=1"
     },
     {
         "title": "Black Panther: Wakanda Forever",
@@ -112,6 +118,7 @@ db.movies.insertMany([
         "actors": "Lupita Nyong'o, Tenoch Huerta, Martin Freeman, Winston Duke, Michaela Coel",
         "plot": "Wakanda fight to protect their nation from intervening world powers in the wake of King T’Challa’s death. As the Wakandans strive to embrace their next chapter, the heroes must band together and forge a new path for the kingdom of Wakanda.",
         "poster": "https://m.media-amazon.com/images/M/MV5BNjMxZmI4NzEtYWNjOS00M2MwLWE4YTctMjk1YWEzOTY1NjkwXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg",
+        "trailer" : "https://www.youtube.com/embed/RlOB3UALvrQ?autoplay=1"
     },
     {
         "title": "Black Adam",
@@ -122,6 +129,7 @@ db.movies.insertMany([
         "actors": "Dwayne Johnson, Sarah Shahi, Mohammed Amer",
         "plot": "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods-and imprisoned just as quickly-Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.",
         "poster": "https://m.media-amazon.com/images/M/MV5BNmEwODNmOTYtMWRmYS00ZTEzLWJmNTAtMWQ4OWVlMzU0MWIyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
+        "trailer" : "https://www.youtube.com/embed/X0tOpBuYasI?autoplay=1"
     },
     {
         "title": "Ticket to Paradise",
@@ -132,6 +140,7 @@ db.movies.insertMany([
         "actors": "Lucas Bravo, Kaitlyn Dever, Julia Roberts, George Clooney, Billie Lourd",
         "plot": "A divorced couple that teams up and travels to Bali to stop their daughter from making the same mistake they think they made 25 years ago.",
         "poster": "https://m.media-amazon.com/images/M/MV5BMWE0MmEwMWUtZjRjOC00YzE3LWI2MjctNjc3NWQ0YTVmNDQ4XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg",
+        "trailer" : "https://www.youtube.com/embed/hkP4tVTdsz8?autoplay=1"
     },
     {
         "title": "Inu-Oh (Subbed)",
@@ -142,5 +151,6 @@ db.movies.insertMany([
         "actors": "Avu-chan(voice), Mirai Moriyama(voice), Tasuku Emoto(voice)",
         "plot": "A cursed dancer and a musician stun society with electrifying concerts in this animated rock opera.",
         "poster": "https://m.media-amazon.com/images/M/MV5BMTk5MDA1ZTQtMGZlMi00OTJmLThlZjEtMjNlZmFkYWRiNmY5XkEyXkFqcGdeQXVyMTY3OTcwMzk@._V1_.jpg",
+        "trailer" : "https://www.youtube.com/embed/cDtY5LSWZns?autoplay=1"
     }
 ])

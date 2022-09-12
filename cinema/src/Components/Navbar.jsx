@@ -18,7 +18,7 @@ function Navigation() {
             <Nav.Link href="/bookings">Bookings</Nav.Link>
             <Nav.Link href="/newreleases">New Releases</Nav.Link>
             <Nav.Link href="/discussion">Discussion</Nav.Link>
-            <NavDropdown title="Information" id="basic-nav-dropdown">
+            <NavDropdown title="Information" id="basic-nav-dropdown" menuVariant="dark">
               <NavDropdown.Item href="/screens">Screens</NavDropdown.Item>
               <NavDropdown.Item href="/classifications">Classifications</NavDropdown.Item>
               <NavDropdown.Item href="/placestogo">Places To Go</NavDropdown.Item>

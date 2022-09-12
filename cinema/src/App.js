@@ -14,19 +14,19 @@ import NewReleases from './Components/NewReleases';
 import OpeningTimes from './Components/OpeningTimes';
 import PlacesToGo from './Components/PlacesToGo';
 import Screens from './Components/Screens';
-//import SearchBar from './Components/SearchBar';
+// import SearchBar from './Components/SearchBar';
 
 
 // As you work add imports to components used
 
 import { Routes, Route } from "react-router-dom";
+import BookingConfirmation from './Components/BookingConfirmation';
 
 function App() {
   return (
   <>
     <Navigation />
-    {/* <Header /> */}
-    {/* <Searchbar /> */}
+  
     
     <div className="container">
         <Routes>
@@ -42,6 +42,7 @@ function App() {
           <Route path="/openingtimes" element={<OpeningTimes />} />
           <Route path="/placestogo" element={<PlacesToGo />} />
           <Route path="/screens" element={<Screens />} />
+          <Route path="/bookingConfirmation" element={<BookingConfirmation />} />
         </Routes>
       <Footer />
     </div>

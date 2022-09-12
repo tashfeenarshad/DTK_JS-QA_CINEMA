@@ -12,7 +12,7 @@ const paymentSchema = new Schema({
         type : String,
         required : true
     },
-    cvc : {
+    cvv : {
         type : Number,
         required : true
     }
@@ -49,6 +49,9 @@ const bookingSchema = new Schema({
     },
     childrenTickets: {
         type : Number
+    },
+    concession: {
+        type: Number
     },
     price: {
         type : Number,
