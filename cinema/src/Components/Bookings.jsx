@@ -57,7 +57,7 @@ const Bookings = () => {
     axios.post("http://localhost:5015/booking/create", bookingInfo)
       .then((res) => {
         console.log(res.data._id + " created")
-        navigate("/bookingConfirmation", {state: res.data});
+        navigate("/bookingConfirmation", { state: res.data });
       }).catch((err) => {
         console.log(err.message)
       })
@@ -97,7 +97,7 @@ const Bookings = () => {
 
 
   return (
-    <>
+    <div id="bookingContainer">
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Payment</Modal.Title>
@@ -246,7 +246,8 @@ const Bookings = () => {
         <Button variant="primary" type="submit" onMouseDown={handleShow}>
           Submit
         </Button>
-      </Form></>
+      </Form>
+    </div>
 
   );
 }
