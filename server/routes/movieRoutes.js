@@ -6,61 +6,70 @@ const Movie = require('../schema/movieSchema.js');
 
 router.get("/getAll", (req, res) => {
 
-    Movie.find({}, (err, result) => {
-        if (err) res.send(err);
-        res.status(200).send(result);
-    });
+    try {
+        Movie.find({}, (err, result) => {
+            if (err) {
+                res.status(500).send(err);
+            }
+            else if (!result) {
+                res.status(404).send(`No entries found in the database`);
+            }
+            res.status(200).send(result);
+        });
+    } catch (err) {
+        res.send(err);
+    }
 });
 
 router.get("/getAllCurrent", (req, res) => {
 
-    Movie.find({ released : { $lte: new Date() } }, (err, result) => {
-        if (err) res.send(err);
-        res.status(200).send(result);
-    })
+    try {
+        Movie.find({ released: { $lte: new Date() } }, (err, result) => {
+            if (err) {
+                res.status(500).send(err);
+            }
+            else if (!result) {
+                res.status(404).send(`No entries with Date value lower than current`);
+            }
+            res.status(200).send(result);
+        })
+    } catch (err) {
+        res.send(err);
+    }
 
 });
 
 router.get("/getAllNew", (req, res) => {
 
-    Movie.find({ released: { $gt: new Date() } }, (err, result) => {
-        if (err) res.send(err);
-        res.status(200).send(result);
-    })
+    try {
+        Movie.find({ released: { $gt: new Date() } }, (err, result) => {
+            if (err) {
+                res.status(500).send(err);
+            } else if (!result) {
+                res.status(404).send(`No entries with Date value higher than current`);
+            }
+            res.status(200).send(result);
+        })
+    } catch (err) {
+        res.send(err);
+    }
 
 });
 
 router.get("/get/:id", (req, res) => {
 
-    Movie.findById(req.params.id, (err, result) => {
-        if (err) res.send(err);
-        res.status(200).send(result);
-    });
+    try {
+        Movie.findById(req.params.id, (err, result) => {
+            if (err) {
+                res.status(500).send(err);
+            } else if (!result) {
+                res.status(404).send(`No entries with ID ${req.params.id} found`);
+            }
+            res.status(200).send(result);
+        });
+    } catch (err) {
+        res.send(err);
+    }
 });
-
-router.post("/create", (req, res) => {
-    const movie = new Movie(req.body);
-    movie.save().then((result) => {
-        res.status(201).send(`${result.title} added to the database`)
-    });
-});
-
-router.put("/update/:id", (req, res) => {
-
-    Movie.findByIdAndUpdate({ _id: req.params.id }, req.body, (err, result) => {
-        if (err) res.send(err);
-        res.status(202).send(`Updated Movie ${req.body.title}`);
-    });
-
-});
-
-router.delete("/delete/:id", (req, res) => {
-    Movie.findByIdAndDelete({ _id: req.params.id }, (err, result) => {
-        if (err) res.send(err);
-        res.status(204).send(`Deleted Movie with ID : ${req.params.id}`);
-    });
-
-});
-
 
 module.exports = router;
