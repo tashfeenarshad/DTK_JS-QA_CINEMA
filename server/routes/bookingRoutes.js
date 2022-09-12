@@ -40,10 +40,7 @@ router.get("/get/:id", (req, res) => {
 router.post("/create", (req, res) => {
     try {
         const booking = new Booking(req.body);
-        booking.save().then((err, result) => {
-            if (err) {
-                res.status(500).send(err);
-            }
+        booking.save().then((result) => {
             res.status(201).send(result)
         });
     } catch (err) {

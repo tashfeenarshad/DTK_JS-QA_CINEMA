@@ -43,10 +43,7 @@ router.get("/get/:id", (req, res) => {
 router.post("/create", (req, res) => {
     try {
         const discussion = new Discussion(req.body);
-        discussion.save().then((err, result) => {
-            if (err) {
-                res.status(500).send(err);
-            }
+        discussion.save().then((result) => {
             res.status(201).send(`Comment by ${result.name} added`)
         });
     } catch (err) {

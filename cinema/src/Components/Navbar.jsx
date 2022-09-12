@@ -9,7 +9,7 @@ import Logo from './Images/logo.png';
 function Navigation() {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar id="topNav">
         <Container>
         <Navbar.Brand href="/">< img src={Logo} width="80px" ></img></Navbar.Brand>
         {/* <Navbar.Brand href="/">Home</Navbar.Brand> */}
