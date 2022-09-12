@@ -2,8 +2,6 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import 'react-calendar/dist/Calendar.css';
-import 'react-date-picker/dist/DatePicker.css';
 import { useEffect, useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import axios from 'axios';
