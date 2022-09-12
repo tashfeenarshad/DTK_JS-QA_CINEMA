@@ -108,18 +108,20 @@ const Bookings = () => {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridText">
               <Form.Label>Name on card</Form.Label>
-              <Form.Control type="text" placeholder="Cardholder Name" />
+              <Form.Control type="text" name="NameOnCard" placeholder="Cardholder Name" required/>
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridText">
               <Form.Label>Card Number</Form.Label>
-              <Form.Control type="Number" placeholder="Card Number" onChange={(e) => { setCardNumber(e.target.value) }} />
+              <Form.Control type="Number" placeholder="Card Number" pattern={/^(?:4[0-9]{12}(?:[0-9]{3})?)$/} minLength={12} maxLength={12}  onChange={(e) => { setCardNumber(e.target.value) }} required/>
             </Form.Group>
           </Row>
 
           <Form.Group className="mb-3" controlId="formGridDate">
             <Form.Label>Expiry</Form.Label>
-            <Form.Control type="expiry" placeholder="MM/YY" onChange={(e) => { setExpiringDate(e.target.value) }} />
+            <Form.Control type="Text" placeholder="MM/YY" pattern={/^(0[1-9]|1[0-2])\/?([0-9]{2})$/}
+
+ onChange={(e) => { setExpiringDate(e.target.value) }} required/>
           </Form.Group>
 
 
@@ -127,7 +129,7 @@ const Bookings = () => {
 
           <Form.Group className="mb-3" controlId="formGridNumber">
             <Form.Label>CVV</Form.Label>
-            <Form.Control type="number" placeholder="CVV" onChange={(e) => { setCvv(e.target.value) }} />
+            <Form.Control type="number" name="cvv" placeholder="CVV" onChange={(e) => { setCvv(e.target.value) }} pattern={/^[0-9]{3,4}$/} required/>
           </Form.Group>
 
 

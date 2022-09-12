@@ -8,8 +8,7 @@
 
 
 
-<<<<<<< HEAD
-}
+
 
 .classification-top-row{
   margin-right: 50px;
@@ -20,7 +19,7 @@
 
   
 }
-=======
+
 /* Popup */
 
 .popup {
@@ -69,8 +68,8 @@
   height: auto;
 }
 
->>>>>>> d55781110473d1b7efb9b4d9dcc19605a0855a41
+
 .Buttons:hover{
   
   box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
+  text-align: center;}
