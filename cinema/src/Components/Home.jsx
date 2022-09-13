@@ -1,11 +1,13 @@
-import Images from './Images/Cineworld.jpg';
-import MovieOne from './Images/Dragonball.jpg';
+import Images from './Images/Majestic1.jpg';
+import MovieOne from './Images/Wolf.jpg';
 import MovieTwo from './Images/Avatar.jpg';
 import Carousel from 'react-bootstrap/Carousel';
 export default function Home() {
   
     return (<>
-    
+
+    <h1 class="text-center"><b>QA Cinema</b></h1>
+  
     <Carousel>
       <Carousel.Item>
         <img

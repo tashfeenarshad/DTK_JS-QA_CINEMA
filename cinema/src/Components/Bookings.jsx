@@ -112,7 +112,7 @@ const Bookings = () => {
         <Modal.Header closeButton>
           <Modal.Title>Payment</Modal.Title>
         </Modal.Header>
-        <Form onSubmit={changeHandler}>
+        <Form onSubmit={handleSubmit}>
           <Modal.Body>
             <Row className="mb-3">
               <Form.Group as={Col} controlId="formGridText">
