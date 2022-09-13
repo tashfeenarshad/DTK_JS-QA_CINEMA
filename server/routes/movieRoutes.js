@@ -21,7 +21,7 @@ router.get("/getAll", (req, res) => {
 
 router.get("/getAllCurrent", (req, res) => {
 
-    Movie.find({}, (err, result) => {
+    Movie.find({released: { $lte: new Date() } }, (err, result) => {
         if (err) 
             res.status(500).send(err);
         
@@ -35,7 +35,7 @@ router.get("/getAllCurrent", (req, res) => {
 
 router.get("/getAllNew", (req, res) => {
 
-    Movie.find({}, (err, result) => {
+    Movie.find({released: { $gt: new Date()}}, (err, result) => {
         if (err) 
             res.status(500).send(err);
         
