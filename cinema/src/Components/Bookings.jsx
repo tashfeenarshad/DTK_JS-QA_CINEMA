@@ -122,7 +122,7 @@ const Bookings = () => {
 
               <Form.Group as={Col} controlId="formGridText">
                 <Form.Label>Card Number</Form.Label>
-                <Form.Control type="Number" placeholder="Card Number" pattern="/^(?:4[0-9]\d{12}(?:[0-9]{3})?)$/" onChange={(e) => { setCardNumber(e.target.value) }} required minLength={12} maxLength={12}/>
+                <Form.Control type="number" placeholder="Card Number" pattern="/^(?:4[0-9]\d{12}(?:[0-9]{3})?)$/" onChange={(e) => { setCardNumber(e.target.value) }} required minLength={12} maxLength={12}/>
               </Form.Group>
             </Row>
 

@@ -33,8 +33,7 @@ export default function Classifications() {
         <Card.Text>
         General viewing, but some scenes may be unsuitable for young children. 
         A PG film should not unsettle a child aged around eight or older. 
-        Unaccompanied children of any age may watch, but parents are advised 
-        to consider whether the content may upset younger, or more sensitive, children.
+       
         </Card.Text>
         <a href ="https://www.bbfc.co.uk/rating/pg" target="_blank" rel="noreferrer"><Button variant="warning" className='Buttons'>Read More</Button></a>
       </Card.Body>
@@ -45,9 +44,7 @@ export default function Classifications() {
         <Card.Title>12 Classification</Card.Title>
         <Card.Text>
         Films classified 12A and video works classified 12 contain material 
-        that is not generally suitable for children aged under 12. No one 
-        younger than 12 may see a 12A film in a cinema unless accompanied 
-        by an adult. 
+        that is not generally suitable for children aged under 12.
         </Card.Text>
         <a href ="https://www.bbfc.co.uk/rating/12" target="_blank" rel="noreferrer"><Button variant="warning">Go somewhere</Button></a>
     
