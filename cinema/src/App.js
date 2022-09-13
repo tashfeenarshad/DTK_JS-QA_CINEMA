@@ -4,7 +4,7 @@ import Bookings from './Components/Bookings';
 import Classifications from './Components/Classifications';
 import Contact from './Components/Contact';
 import Directions from './Components/Directions';
-import Discussion from './Components/Discussion';
+import DiscussionBoard from './Components/Disucssion';
 import Footer from './Components/Footer';
 //import Header from './Components/Header';
 import Home from './Components/Home';
@@ -35,7 +35,7 @@ function App() {
           <Route path="/classifications" element={<Classifications />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/directions" element={<Directions />} />
-          <Route path="/discussion" element={<Discussion />} />
+          <Route path="/Discussion" element={<DiscussionBoard/>} />
           <Route path="/" element={<Home />} /> 
           <Route path="/listings" element={<Listings />} />
           <Route path="/newreleases" element={<NewReleases />} />
