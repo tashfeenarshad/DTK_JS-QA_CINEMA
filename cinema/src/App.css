@@ -96,15 +96,10 @@ body {
   padding: 20px;
   width: 60%;
   height: auto;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 }
 
 
-.Buttons:hover{
-  
-  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;}
 
 
 /* Booking */
@@ -147,4 +142,3 @@ body {
   --bs-table-color: white !important;
   border-color: white !important;
 }
->>>>>>> de2c9a83a802456c3e05017b1bc6241a1ec19131
