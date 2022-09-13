@@ -26,9 +26,7 @@ function App() {
   return (
   <>
     <Navigation />
-    <div className="App">
-      <SearchBar placeholder="Enter a Movie Name..." data={movieData} />
-    </div>
+    
   
     
     <div className="container">

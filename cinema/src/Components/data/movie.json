@@ -1,26 +1,92 @@
 [
     {
-        "name" : "Commenter43",
-        "comment" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit ac mi vitae egestas. Vivamus tincidunt at velit nec scelerisque. Quisque et laoreet odio. Mauris faucibus finibus libero sit amet.",
-        "movie" : "Avatar",
-        "rating" : 8
+        "title": "Avatar",
+        "year": "2009",
+        "rated": "PG-13",
+        "released": "18 Dec 2009",
+        "runtime": "162 min",
+        "genre": "Action, Adventure, Fantasy",
+        "director": "James Cameron",
+        "actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+        "plot": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNjA3NGExZDktNDlhZC00NjYyLTgwNmUtZWUzMDYwMTZjZWUyXkEyXkFqcGdeQXVyMTU1MDM3NDk0._V1_.jpg",
+        "showtime": [
+            {
+                "days" : ["Monday"],
+                "times" : ["13:00", "15:00", "18:00"]
+            }
+        ]
     },
     {
-        "name" : "cinemaViewer21",
-        "comment" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae mi tincidunt elit lobortis sodales eu at orci. Pellentesque faucibus consequat neque sed dictum. Curabitur feugiat nisl diam. Praesent in risus nunc. Mauris eget metus nulla. Duis dui magna, vehicula eget risus sit.",
-        "movie" : "300",
-        "rating" : 7
+        "title": "I Am Legend",
+        "year": "2007",
+        "rated": "PG-13",
+        "released": "14 Dec 2007",
+        "runtime": "101 min",
+        "genre": "Drama, Horror, Sci-Fi",
+        "director": "Francis Lawrence",
+        "actors": "Will Smith, Alice Braga, Charlie Tahan, Salli Richardson-Whitfield",
+        "plot": "years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BYTE1ZTBlYzgtNmMyNS00ZTQ2LWE4NjEtZjUxNDJkNTg2MzlhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+        "showtime": [
+            {
+                "days" : ["Tuesday"],
+                "times" : ["13:00", "15:00", "18:00"]
+            }
+        ]
     },
     {
-        "name" : "Amongus675",
-        "comment" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in.",
-        "movie" : "The Avengers",
-        "rating" : 10
+        "title": "300",
+        "year": "2006",
+        "rated": "R",
+        "released": "09 Mar 2007",
+        "runtime": "117 min",
+        "genre": "Action, Drama, Fantasy",
+        "director": "Zack Snyder",
+        "actors": "Gerard Butler, Lena Headey, Dominic West, David Wenham",
+        "plot": "King Leonidas of Sparta and a force of 300 men fight the Persians at Thermopylae in 480 B.C.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNWMxYTZlOTUtZDExMi00YzZmLTkwYTMtZmM2MmRjZmQ3OGY4XkEyXkFqcGdeQXVyMTAwMzUyMzUy._V1_FMjpg_UX1000_.jpg",
+        "showtime": [
+            {
+                "days" : ["Wednesday"],
+                "times" : ["13:00", "15:00", "18:00"]
+            }
+        ]
     },
     {
-        "name" : "MovieH8Tr",
-        "comment" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin pulvinar metus, ut sollicitudin sem fermentum et. Proin tempor, dolor sit amet pretium tristique, nisi libero blandit enim, et posuere elit diam sed nunc. Morbi fringilla euismod velit, sit amet pellentesque ante tincidunt vitae. Phasellus lacinia lectus non lacus accumsan sodales a id ante. Quisque et dignissim est, non feugiat elit. Nulla non rhoncus magna. Curabitur lobortis libero eu lorem consectetur, vel mollis arcu condimentum. Nam risus enim, accumsan eget varius eget, pretium vel urna. Nunc vestibulum consectetur tortor, eu blandit sapien malesuada vitae. \n Nam vitae vestibulum eros. Aenean commodo nunc id libero ultrices, nec ultricies nulla dapibus. Fusce non vehicula enim, eget sollicitudin quam. Vestibulum sed convallis ipsum. Maecenas vitae accumsan ligula. Morbi nec lorem condimentum, hendrerit orci sed, eleifend libero. Praesent sit amet sapien sit amet augue imperdiet congue. Nulla suscipit lobortis varius. Aliquam cursus ullamcorper arcu, eu consequat purus venenatis et. Quisque pretium nec felis eget hendrerit. Integer viverra urna eu feugiat elementum. Mauris massa libero, auctor vitae nibh non, lobortis viverra enim. Donec volutpat nisl quis dui semper commodo nec vitae neque. Vivamus a nibh urna. Phasellus ut augue diam. Etiam hendrerit, tellus in consectetur auctor.",
-        "movie" : "I Am Legend",
-        "rating" : 2
-    }   
+        "title": "The Avengers",
+        "year": "2012",
+        "rated": "PG-13",
+        "released": "04 May 2012",
+        "runtime": "143 min",
+        "genre": "Action, Sci-Fi, Thriller",
+        "director": "Joss Whedon",
+        "actors": "Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth",
+        "plot": "Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+        "showtime": [
+            {
+                "days" : ["Thursday"],
+                "times" : ["13:00", "15:00", "18:00"]
+            }
+        ]
+    },
+    {
+        "title": "The Wolf of Wall Street",
+        "year": "2013",
+        "rated": "R",
+        "released": "25 Dec 2013",
+        "runtime": "180 min",
+        "genre": "Biography, Comedy, Crime",
+        "director": "Martin Scorsese",
+        "actors": "Leonardo DiCaprio, Jonah Hill, Margot Robbie, Matthew McConaughey",
+        "plot": "Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_.jpg",
+        "showtime": [
+            {
+                "days" : ["Friday"],
+                "times" : ["13:00", "15:00", "18:00"]
+            }
+        ]
+    }
 ]

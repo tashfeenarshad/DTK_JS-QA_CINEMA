@@ -6,7 +6,7 @@ function SearchBar({placeholder,data}) {
   const handleFilter =(event) =>{
     const searchWord =event.target.value
     const newFilter = data.filter((value)=>{
-        return value.name.toLowerCase().includes(searchWord.toLowerCase());
+        return value.title.toLowerCase().includes(searchWord.toLowerCase());
     });
 
     if(searchWord === ""){
@@ -31,7 +31,7 @@ function SearchBar({placeholder,data}) {
     {filterData.slice(0,3).map((value, key)=>{
         return<a className='dataItem'>
         
-        <p>{value.name}</p>
+        <p>{value.title}</p>
         </a>;
     })}
 
