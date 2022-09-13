@@ -38,7 +38,7 @@ const Listings = () => {
 
       <div id="film-container" style={{ display: "flex" }}>
         {items.map((item) =>
-          <Card style={{ width: '18rem', margin: "10px" }} key={item._id} text={"black"} bg={"dark"}>
+          <Card style={{ width: '18rem', margin: "10px" }} key={item._id}>
             <Card.Img variant="top" src={item.poster} />
             <Card.Body>
               <Card.Title>{item.title}</Card.Title>
@@ -47,21 +47,23 @@ const Listings = () => {
               </Card.Text>
             </Card.Body>
             <ListGroup className="list-group list-group-flush">
-              <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Genre: </b> {item.genre}</ListGroup.Item>
-              <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Runtime: </b>{item.runtime}</ListGroup.Item>
-              <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Rated: </b>{item.rated}</ListGroup.Item>
-              <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Director: </b>{item.director}</ListGroup.Item>
-              <ListGroup.Item style = {{background : "#212529", color : "#fff"}}><b>Actors: </b>{item.actors}</ListGroup.Item>
+              <ListGroup.Item><b>Genre: </b> {item.genre}</ListGroup.Item>
+              <ListGroup.Item><b>Runtime: </b>{item.runtime}</ListGroup.Item>
+              <ListGroup.Item><b>Rated: </b>{item.rated}</ListGroup.Item>
+              <ListGroup.Item><b>Director: </b>{item.director}</ListGroup.Item>
+              <ListGroup.Item><b>Actors: </b>{item.actors}</ListGroup.Item>
               {item.showtime.map((showtimes, i) =>
-                <ListGroup.Item style = {{background : "#212529", color : "#fff"}} key={i}>
+                <ListGroup.Item key={i}>
                 <b>Showing on:</b> {showtimes.days.join(" ")} 
                 <br></br>
                 <b>At:</b> {showtimes.times.join(" ")}
                 </ListGroup.Item>
               )}
-              <Button variant="warning" onClick={() => {setButtonPopup(true); setTrailerUrl(item.trailer);}}>Trailer</Button>
+              <div style={{display: "flex-inline"}}>
+              <Button variant="outline-success" style={{width: "50%"}} onClick={() => {setButtonPopup(true); setTrailerUrl(item.trailer);}}>Trailer</Button>
+              <Button variant="outline-success" style={{width: "50%"}} href="/bookings">Book a ticket</Button>{' '}
+              </div>
             </ListGroup>
-            <Button variant="success" href="/bookings">Book a ticket</Button>{' '}
           </Card>)}
           <Popup trigger={buttonPopup} setTrigger={setButtonPopup} trailerVideo={(trailerUrl)}> </Popup>
       </div>
