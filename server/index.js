@@ -32,3 +32,4 @@ const server = app.listen(5015, (err) => {
         console.log(`Server link: http://localhost:${server.address().port}`);
     }
 })
+module.exports = server;
