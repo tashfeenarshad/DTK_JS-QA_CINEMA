@@ -68,8 +68,14 @@ const Bookings = () => {
   };
 
 
-  const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true);
+  const handleClose = (e) => {
+    e.preventDefault()
+    setShow(false)
+  };
+  const handleShow = (e) => {
+    e.preventDefault()
+    setShow(true)
+  }
 
   useEffect(() => {
     axios.get("http://localhost:5015/movie/getAllCurrent")
@@ -247,7 +253,7 @@ const Bookings = () => {
 
         </Row>
 
-        <Button variant="primary" type="submit" onSubmit={handleShow}>
+        <Button variant="primary" type="submit" onClick={(e) => {handleShow(e)}}>
           Submit
         </Button>
       </Form></>
