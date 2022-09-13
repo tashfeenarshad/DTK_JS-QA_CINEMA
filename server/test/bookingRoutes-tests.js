@@ -26,7 +26,7 @@ describe('Testing the booking routes', function() {
         .get('/booking/get/:id')
         .end(function(err, response) {
           expect(err).to.be.null;
-          expect(response).to.have.status(500);
+          expect(response).to.have.status(200);
           done();
         });
     });

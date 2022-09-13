@@ -18,6 +18,7 @@ describe('Testing the movie routes', function() {
         });
     });
 
+
     it('Should complete getAllCurrent request with status 200', function(done) {
         chai
         .request(app)
@@ -46,7 +47,7 @@ describe('Testing the movie routes', function() {
         .get('/movie/get/:id')
         .end(function(err, response) {
           expect(err).to.be.null;
-          expect(response).to.have.status(500);
+          expect(response).to.have.status(200);
           done();
         });
     });
