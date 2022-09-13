@@ -31,7 +31,9 @@ const Bookings = () => {
   const [expiringDate, setExpiringDate] = useState();
   const [cvv, setCvv] = useState();
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+
+    e.preventDefault();
 
     let price = (adultTickets * 5 + childrenTickets * 2 + concession * 3)
 
@@ -66,8 +68,14 @@ const Bookings = () => {
   };
 
 
-  const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true);
+  const handleClose = (e) => {
+    e.preventDefault()
+    setShow(false)
+  };
+  const handleShow = (e) => {
+    e.preventDefault()
+    setShow(true)
+  }
 
   useEffect(() => {
     axios.get("http://localhost:5015/movie/getAllCurrent")
@@ -106,18 +114,20 @@ const Bookings = () => {
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridText">
               <Form.Label>Name on card</Form.Label>
-              <Form.Control type="text" placeholder="Cardholder Name" />
+              <Form.Control type="text" name="NameOnCard" placeholder="Cardholder Name" required/>
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridText">
               <Form.Label>Card Number</Form.Label>
-              <Form.Control type="Number" placeholder="Card Number" onChange={(e) => { setCardNumber(e.target.value) }} />
+              <Form.Control type="Number" placeholder="Card Number" pattern="/^(?:4[0-9]\d{12}(?:[0-9]{3})?)$/" minLength={12} maxLength={12}  onChange={(e) => { setCardNumber(e.target.value) }} required/>
             </Form.Group>
           </Row>
 
           <Form.Group className="mb-3" controlId="formGridDate">
             <Form.Label>Expiry</Form.Label>
-            <Form.Control type="expiry" placeholder="MM/YY" onChange={(e) => { setExpiringDate(e.target.value) }} />
+            <Form.Control type="" placeholder="MM/YY" pattern="/^(0[1-9]|1[0-2])\/?([0-9]{2})$/"
+
+ onChange={(e) => { setExpiringDate(e.target.value) }} required/>
           </Form.Group>
 
 
@@ -125,7 +135,7 @@ const Bookings = () => {
 
           <Form.Group className="mb-3" controlId="formGridNumber">
             <Form.Label>CVV</Form.Label>
-            <Form.Control type="number" placeholder="CVV" onChange={(e) => { setCvv(e.target.value) }} />
+            <Form.Control type="number" name="cvv" placeholder="CVV" onChange={(e) => { setCvv(e.target.value) }} pattern="/^[0-9]{3,4}$/" required/>
           </Form.Group>
 
 
@@ -137,7 +147,7 @@ const Bookings = () => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleSubmit}>
+          <Button variant="primary" type="submit" onSubmit={handleSubmit}>
             Submit
           </Button>
         </Modal.Footer>
@@ -149,18 +159,18 @@ const Bookings = () => {
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridText">
             <Form.Label>First Name</Form.Label>
-            <Form.Control type="text" placeholder="First Name" onChange={(e) => { setFirstName(e.target.value) }} />
+            <Form.Control type="text" placeholder="First Name" onChange={(e) => { setFirstName(e.target.value) }} required/>
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridText">
             <Form.Label>Last Name</Form.Label>
-            <Form.Control type="text" placeholder="Last Name" onChange={(e) => { setLastName(e.target.value) }} />
+            <Form.Control type="text" placeholder="Last Name" onChange={(e) => { setLastName(e.target.value) }} required/>
           </Form.Group>
         </Row>
 
         <Form.Group className="mb-3" controlId="formGridState">
           <Form.Label>Film</Form.Label>
-          <Form.Select defaultValue="Choose..." onChange={changeHandler}>
+          <Form.Select defaultValue="Choose..." onChange={changeHandler} required>
             {(items == null) ? (<option>Choose a movie</option>) :
               (items.map((item) =>
                 <option key={item._id} id={item._id}>{item.title}</option>
@@ -170,7 +180,7 @@ const Bookings = () => {
 
         <Form.Group className="mb-3" controlId="formGridTime">
           <Form.Label>Time</Form.Label>
-          <Form.Select defaultValue="Choose..." onChange={(e) => { setDay(e.target.value) }}>
+          <Form.Select defaultValue="Choose..." onChange={(e) => { setDay(e.target.value) }} required>
             {(showingDays == null) ? (<option>Choose a day</option>) :
               (showingDays.map((days, i) =>
                 <option key={i}>{days}</option>)
@@ -180,7 +190,7 @@ const Bookings = () => {
 
         <Form.Group className="mb-3" controlId="formGridTime">
           <Form.Label>Time</Form.Label>
-          <Form.Select defaultValue="Choose..." onChange={(e) => { setTime(e.target.value) }}>
+          <Form.Select defaultValue="Choose..." onChange={(e) => { setTime(e.target.value) }} required>
             {(showingTimes == null) ? (<option>Choose a time</option>) :
               (showingTimes.map((times, i) =>
                 <option key={i}>{times}</option>)
@@ -193,7 +203,7 @@ const Bookings = () => {
 
           <Form.Group as={Col} controlId="formGridState">
             <Form.Label>Adult</Form.Label>
-            <Form.Select defaultValue="Choose..." onChange={(e) => { setAdultTickets(e.target.value) }}>
+            <Form.Select defaultValue="Choose..." onChange={(e) => { setAdultTickets(e.target.value) }} required>
               <option>Choose...</option>
               <option>1</option>
               <option>2</option>
@@ -209,7 +219,7 @@ const Bookings = () => {
           </Form.Group>
           <Form.Group as={Col} controlId="formGridState">
             <Form.Label>Child</Form.Label>
-            <Form.Select defaultValue="Choose..." onChange={(e) => { setChildrenTickets(e.target.value) }}>
+            <Form.Select defaultValue="Choose..." onChange={(e) => { setChildrenTickets(e.target.value) }} required>
               <option>Choose...</option>
               <option>1</option>
               <option>2</option>
@@ -225,7 +235,7 @@ const Bookings = () => {
           </Form.Group>
           <Form.Group as={Col} controlId="formGridState">
             <Form.Label>Concession</Form.Label>
-            <Form.Select defaultValue="Choose..." onChange={(e) => { setConcession(e.target.value) }}>
+            <Form.Select defaultValue="Choose..." onChange={(e) => { setConcession(e.target.value) }} required>
               <option>Choose...</option>
               <option>1</option>
               <option>2</option>
@@ -243,7 +253,7 @@ const Bookings = () => {
 
         </Row>
 
-        <Button variant="primary" type="submit" onMouseDown={handleShow}>
+        <Button variant="primary" type="submit" onClick={(e) => {handleShow(e)}}>
           Submit
         </Button>
       </Form>
