@@ -41,7 +41,7 @@ const BookingConfirmation = () => {
 
                         <h4><b>{movieBooking[0].movie}</b> on <b>{movieBooking[0].day}</b> at <b>{movieBooking[0].time}</b></h4>
 
-                        <Table variant="dark">
+                        <Table>
                             <tbody>
                                 <tr>
                                     <td>First Name</td>

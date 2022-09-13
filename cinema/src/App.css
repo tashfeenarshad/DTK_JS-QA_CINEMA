@@ -4,9 +4,9 @@ html {
 }
 
 /*Body*/
-body{
-  background-image: linear-gradient(180deg, rgb(69 0 110), rgb(0 0 98));
-  color:rgb(194 68 69) !important;
+body {
+  background-image: linear-gradient(180deg, rgb(31 0 127), rgb(88 33 240));
+  color: rgb(162 0 73) !important;
   height: 100%;
   margin: 0;
   background-repeat: no-repeat;
@@ -15,18 +15,18 @@ body{
 
 /* Bootstrap Navbar-Nav */
 .navbar-nav {
-  --bs-nav-link-color: rgb(194 68 69) !important;
+  --bs-nav-link-color: rgb(162 0 73) !important;
 }
 
-/* Top Navbar */
-#topNav {
+/* Navbas */
+.navbar {
   background-color: rgb(29 7 42);
 }
 
 /* Footer */
-.footer{
-  background-color: rgb(0,0,98) !important;
-  margin-top: 20px;
+.footer {
+  margin-top: 0px;
+  margin-bottom: 0px;
   width: 100%;
 }
 
@@ -51,7 +51,7 @@ body{
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
+  background-color: rgb(29 7 42 / 80%);
 
   display: flex;
   justify-content: center;
@@ -74,22 +74,29 @@ body{
 /*Modal*/
 
 .modal-content {
-  background-color: rgba(33, 37, 41) !important;
+  background-color: rgb(29 7 42) !important;
+  margin-top: 40% !important;
 }
 
 /*BookingConfirmation*/
 
 .confirmationContainer {
+  color: white !important;
   margin: 10px;
+  text-align: center;
 }
 
 .confirmationSubContainer {
-  background-color: rgb(33, 37, 41);
+  box-shadow: 0px 0px 15px rgb(0 0 0), inset 0px 0px 15px 0px rgb(70 70 70 / 12%);
+  background-color: rgb(29 7 42);
   border-radius: 15px;
   margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 20px;
   width: 60%;
   height: auto;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -101,3 +108,47 @@ body{
 =======
 }
 >>>>>>> 9a12a526103aa0fbadd4e232a34d98edb2f59925
+=======
+}
+
+/* Booking */
+#bookingContainer {
+  margin-top: 70px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 0px 15px rgb(0 0 0), inset 0px 0px 15px 0px rgb(70 70 70 / 12%);
+  padding: 30px;
+  border-radius: 30px;
+  background-color: rgb(29 7 42 / 80%);
+}
+
+/* Buttons */
+.btn-primary {
+  --bs-btn-bg: rgb(162 0 73) !important;
+  --bs-btn-border-color: rgb(162 0 73) !important;
+  --bs-btn-hover-bg: rgb(162 0 73) !important;
+  --bs-btn-hover-border-color: rgb(162 0 73) !important;
+  --bs-btn-active-bg: rgb(162 0 73) !important;
+  --bs-btn-active-border-color: rgb(162 0 73) !important;
+  --bs-btn-disabled-bg: rgb(162 0 73) !important;
+  --bs-btn-disabled-border-color: rgb(162 0 73) !important;
+}
+
+.btn-outline-success {
+  --bs-btn-color: rgb(162 0 73) !important;
+  --bs-btn-border-color: rgb(162 0 73) !important;
+  --bs-btn-hover-bg: rgb(162 0 73) !important;
+  --bs-btn-hover-border-color: rgb(162 0 73) !important;
+  --bs-btn-active-bg: rgb(162 0 73) !important;
+  --bs-btn-active-border-color: rgb(162 0 73) !important;
+  --bs-btn-disabled-color: rgb(162 0 73) !important;
+  --bs-btn-disabled-border-color: rgb(162 0 73) !important;
+}
+
+/*Table*/
+.table {
+  --bs-table-color: white !important;
+  border-color: white !important;
+}
+>>>>>>> de2c9a83a802456c3e05017b1bc6241a1ec19131
