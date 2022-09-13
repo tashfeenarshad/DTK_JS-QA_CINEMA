@@ -6,7 +6,7 @@ html {
 /*Body*/
 body {
   background-image: linear-gradient(180deg, rgb(31 0 127), rgb(88 33 240));
-  color: rgb(162 0 73) !important;
+  color: #bdbdbd !important;
   height: 100%;
   margin: 0;
   background-repeat: no-repeat;
@@ -15,12 +15,13 @@ body {
 
 /* Bootstrap Navbar-Nav */
 .navbar-nav {
-  --bs-nav-link-color: rgb(162 0 73) !important;
+  --bs-nav-link-color: #bdbdbd !important;
 }
 
 /* Navbas */
 .navbar {
   background-color: rgb(29 7 42);
+  --bs-navbar-hover-color: rgb(100 0 73) !important;
 }
 
 /* Footer */
@@ -33,14 +34,14 @@ body {
 
 
 
-.classification-top-row{
+.classification-top-row {
   margin-right: 50px;
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
 
-  
+
 }
 
 /* Popup */
@@ -51,7 +52,7 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgb(29 7 42 / 80%);
+  background-color: rgba(0, 0, 0, 0.8);
 
   display: flex;
   justify-content: center;
@@ -81,7 +82,7 @@ body {
 /*BookingConfirmation*/
 
 .confirmationContainer {
-  color: white !important;
+  color: #bdbdbd !important;
   margin: 10px;
   text-align: center;
 }
@@ -90,19 +91,13 @@ body {
   box-shadow: 0px 0px 15px rgb(0 0 0), inset 0px 0px 15px 0px rgb(70 70 70 / 12%);
   background-color: rgb(29 7 42);
   border-radius: 15px;
-  margin-top: 25px;
+  margin-top: 70px;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
   width: 60%;
   height: auto;
 }
-
-
-.Buttons:hover{
-  
-  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;}
 
 
 /* Booking */
@@ -144,4 +139,35 @@ body {
 .table {
   --bs-table-color: white !important;
   border-color: white !important;
+}
+
+
+/* Carousel */
+.carousel.slide {
+  box-shadow: 0px 0px 15px rgb(0 0 0), inset 0px 0px 15px 0px rgb(70 70 70 / 12%);
+  border-radius: 30px;
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+}
+
+.carousel-inner {
+  border-radius: 30px;
+}
+
+/*Listing div*/
+#film-container {
+  padding-bottom: 5%;
+}
+
+#film-container>.card {
+  background-color: rgb(29 7 42) !important;
+  color: #bdbdbd !important;
+  box-shadow: 0px 0px 15px rgb(0 0 0), inset 0px 0px 15px 0px rgb(70 70 70 / 12%);
+}
+
+.list-group {
+  --bs-list-group-color: #bdbdbd !important;
+  --bs-list-group-bg: rgb(29 7 42) !important;
 }
