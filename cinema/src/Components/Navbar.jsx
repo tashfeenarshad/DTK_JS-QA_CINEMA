@@ -11,8 +11,8 @@ function Navigation() {
     <>
       <Navbar id="topNav">
         <Container>
-        <Navbar.Brand href="/">< img src={Logo} width="80px" ></img></Navbar.Brand>
-        {/* <Navbar.Brand href="/">Home</Navbar.Brand> */}
+          <Navbar.Brand href="/">< img src={Logo} width="80px" ></img></Navbar.Brand>
+          {/* <Navbar.Brand href="/">Home</Navbar.Brand> */}
           <Nav className="me-auto">
             <Nav.Link href="/listings">Listings</Nav.Link>
             <Nav.Link href="/bookings">Bookings</Nav.Link>
