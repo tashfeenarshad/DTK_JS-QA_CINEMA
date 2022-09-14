@@ -3,17 +3,17 @@ import MovieOne from './Images/Wolf.jpg';
 import MovieTwo from './Images/Avatar.jpg';
 import Carousel from 'react-bootstrap/Carousel';
 export default function Home() {
-  
-    return (<>
 
-    <h1 class="text-center"><b>QA Cinema</b></h1>
-  
+  return (<>
+
+    <h1 className="text-center"><b>QA Cinema</b></h1>
+
     <Carousel>
       <Carousel.Item>
         <img
           src={Images}
           alt="Cinema"
-          width={"70%"}
+          style={{ width: "-webkit-fill-available" }}
         />
         <Carousel.Caption>
           <h3>QA Cinema</h3>
@@ -35,9 +35,9 @@ export default function Home() {
         />
       </Carousel.Item>
     </Carousel>
-    
-    
-    </>)
-    
-    
-  }
+
+
+  </>)
+
+
+}

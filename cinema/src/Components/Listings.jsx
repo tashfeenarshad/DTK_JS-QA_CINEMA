@@ -54,18 +54,18 @@ const Listings = () => {
               <ListGroup.Item><b>Actors: </b>{item.actors}</ListGroup.Item>
               {item.showtime.map((showtimes, i) =>
                 <ListGroup.Item key={i}>
-                <b>Showing on:</b> {showtimes.days.join(" ")} 
-                <br></br>
-                <b>At:</b> {showtimes.times.join(" ")}
+                  <b>Showing on:</b> {showtimes.days.join(" ")}
+                  <br></br>
+                  <b>At:</b> {showtimes.times.join(" ")}
                 </ListGroup.Item>
               )}
-              <div style={{display: "flex-inline"}}>
-              <Button variant="outline-success" style={{width: "50%"}} onClick={() => {setButtonPopup(true); setTrailerUrl(item.trailer);}}>Trailer</Button>
-              <Button variant="outline-success" style={{width: "50%"}} href="/bookings">Book a ticket</Button>{' '}
+              <div style={{ display: "flex-inline" }}>
+                <Button variant="outline-success" style={{ width: "50%" }} onClick={() => { setButtonPopup(true); setTrailerUrl(item.trailer); }}>Trailer</Button>
+                <Button variant="outline-success" style={{ width: "50%" }} href="/bookings">Book View</Button>{' '}
               </div>
             </ListGroup>
           </Card>)}
-          <Popup trigger={buttonPopup} setTrigger={setButtonPopup} trailerVideo={(trailerUrl)}> </Popup>
+        <Popup trigger={buttonPopup} setTrigger={setButtonPopup} trailerVideo={(trailerUrl)}> </Popup>
       </div>
     )
   }

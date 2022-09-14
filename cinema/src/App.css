@@ -18,10 +18,21 @@ body {
   --bs-nav-link-color: #bdbdbd !important;
 }
 
+.dropdown-menu-dark {
+  --bs-dropdown-bg: rgb(29 7 42) !important;
+  outline: #bdbdbd 1px solid;
+}
+
 /* Navbas */
 .navbar {
   background-color: rgb(29 7 42);
   --bs-navbar-hover-color: rgb(100 0 73) !important;
+  --bs-active-color: rgb(100 0 73) !important;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .show>.nav-link {
+  color: rgb(100 0 73) !important;
 }
 
 /* Footer */
@@ -173,6 +184,7 @@ body {
   --bs-list-group-bg: rgb(29 7 42) !important;
 }
 
+
 /* about page */
 
 .aboutDiv{
@@ -213,3 +225,124 @@ padding: left 5rem; ;
 .aboutCard>motion.div{
   width: 5rem;
 }
+
+/* Discussion */
+
+.discussionContainer {
+  display: flex;
+  padding-bottom: 5%;
+}
+
+.discussionFormContrainer {
+  box-shadow: 0px 0px 15px rgb(0 0 0), inset 0px 0px 15px 0px rgb(70 70 70 / 12%);
+  width: 30%;
+  margin: 30px;
+  height: fit-content;
+  padding: 30px;
+  background-color: rgb(29 7 42);
+  border-radius: 10px;
+}
+
+.disscussionListContainer {
+
+  width: 60%;
+  margin: 10px;
+}
+
+.disscussionListContainer>.list-group {
+  box-shadow: 0px 0px 15px rgb(0 0 0), inset 0px 0px 15px 0px rgb(70 70 70 / 12%);
+  border-radius: 10px;
+  margin: 10px
+}
+
+/*Classifications*/
+
+.classificationContainer {
+  margin: 5%;
+}
+
+.classificationContainer>.card {
+  box-shadow: 0px 0px 15px rgb(0 0 0), inset 0px 0px 15px 0px rgb(70 70 70 / 12%);
+  background-color: rgb(29 7 42);
+  color: #bdbdbd;
+}
+
+/*Opening Times*/
+.openingTimesContainer{
+  margin-top:5%;
+  margin-bottom:5%;
+  display: flex;
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.openingTimesContainer > .card{
+  height: fit-content;
+  box-shadow: 0px 0px 15px rgb(0 0 0), inset 0px 0px 15px 0px rgb(70 70 70 / 12%);
+  background-color: rgb(29 7 42);
+  color: #bdbdbd;
+}
+
+/*Directions*/
+
+.directionsContainer{
+  margin:20px;
+  display: flex;
+}
+
+.directionsMapContainer{
+  box-shadow: 0px 0px 15px rgb(0 0 0), inset 0px 0px 15px 0px rgb(70 70 70 / 12%);
+  background-color: rgb(29 7 42);
+  border-radius: 10px;
+  width:50%;
+  margin:20px;
+  padding: 10px;
+}
+
+.directionsAddressContainer{
+  box-shadow: 0px 0px 15px rgb(0 0 0), inset 0px 0px 15px 0px rgb(70 70 70 / 12%);
+  background-color: rgb(29 7 42);
+  border-radius: 10px;
+  width:50%;
+  margin:20px;
+  padding: 20px;
+  height: -webkit-fill-available;
+}
+
+.directionsParkingContainer{
+  box-shadow: 0px 0px 15px rgb(0 0 0), inset 0px 0px 15px 0px rgb(70 70 70 / 12%);
+  background-color: rgb(29 7 42);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+
+/*Contact Us*/
+.contactContainer{
+  display:flex;
+  margin:20px;
+}
+
+.contactAddressContainer{
+  box-shadow: 0px 0px 15px rgb(0 0 0), inset 0px 0px 15px 0px rgb(70 70 70 / 12%);
+  background-color: rgb(29 7 42);
+  border-radius: 10px;
+  width:30%;
+  margin:20px;
+  padding: 10px;
+  height: -webkit-fill-available;
+}
+
+.contactEmailContainer{
+  box-shadow: 0px 0px 15px rgb(0 0 0), inset 0px 0px 15px 0px rgb(70 70 70 / 12%);
+  background-color: rgb(29 7 42);
+  border-radius: 10px;
+  width:60%;
+  margin:20px;
+  padding: 30px;
+}
+
