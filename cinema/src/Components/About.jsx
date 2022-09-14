@@ -21,7 +21,7 @@ function About() {
         <motion.h2 layout="position">Damian Poclitar🎬</motion.h2>
         {isOpen && 
         <motion.div initial={{opacity: 0 }} animate={{opacity: 1 }} >
-            <h4>Back-End Developer</h4>
+            <h4>Technical Team Lead/Developer</h4>
           <p>
           <a href='/contact' target="_blank" rel="noopener noreferrer"><Button variant="primary">Email</Button></a> 
           <a href='https://www.linkedin.com/in/damianpoclitar/' target="_blank" rel="noopener noreferrer"><Button variant="primary">LinkedIn</Button></a>
@@ -37,7 +37,7 @@ function About() {
         <motion.h2 layout="position">Jariful Hoque🎬</motion.h2>
         {isOpen && 
         <motion.div initial={{opacity: 0 }} animate={{opacity: 1 }} >
-            <h4>Full Stack Developer</h4>
+            <h4>Dev Ops/Full Stack Developer</h4>
           <p>
           <a href='/contact' target="_blank" rel="noopener noreferrer"><Button variant="primary">Email</Button></a> 
           <a href='https://www.linkedin.com/in/jarif-hoque/' target="_blank" rel="noopener noreferrer"><Button variant="primary">LinkedIn</Button></a>
@@ -55,7 +55,7 @@ function About() {
         <motion.h2 layout="position">Kya Edmeade🎬</motion.h2>
         {isOpen && 
         <motion.div initial={{opacity: 0 }} animate={{opacity: 1 }} >
-            <h4>Front-End Developer</h4>
+            <h4>Scrum Master/Developer</h4>
           <p>
           <a href='/contact' target="_blank" rel="noopener noreferrer"><Button variant="primary">Email</Button></a> 
           <a href='https://www.linkedin.com/in/kya-edmeade/' target="_blank" rel="noopener noreferrer"><Button variant="primary">LinkedIn</Button></a>
@@ -71,7 +71,7 @@ function About() {
         <motion.h2 layout="position">Tashfeen Arshad🎬</motion.h2>
         {isOpen && 
         <motion.div initial={{opacity: 0 }} animate={{opacity: 1 }} >
-            <h4>Product Owner</h4>
+            <h4>Product Owner/Developer</h4>
           <p>
           <a href='/contact' target="_blank" rel="noopener noreferrer"><Button variant="primary">Email</Button></a>
           <a href=''target="_blank" rel="noopener noreferrer"><Button variant="primary">LinkedIn</Button></a>
@@ -88,7 +88,7 @@ function About() {
         <motion.h2 layout="position">Syed Zaidi🎬</motion.h2>
         {isOpen && 
         <motion.div initial={{opacity: 0 }} animate={{opacity: 1 }} >
-            <h4>Front-End Developer</h4>
+            <h4>Full Stack Developer</h4>
           <p>
           <a href='/contact' target="_blank" rel="noopener noreferrer"><Button variant="primary">Email</Button></a> 
               <a href='https://www.linkedin.com/in/syed-namvar-zaidi/' target="_blank" rel="noopener noreferrer"><Button variant="primary">LinkedIn</Button></a>
