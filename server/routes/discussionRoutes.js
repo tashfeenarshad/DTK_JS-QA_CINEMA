@@ -5,30 +5,17 @@ const Discussion = require('../schema/discussionSchema.js');
 
 router.get("/getAll", (req, res) => {
 
-    
-    Discussion.find({}, (err, result) => {
-        if (err) 
-            res.status(500).send(err);
-        
-        else if (!result.length) 
-            res.status(404).send(`No entries found in the database`);
-        else
-        res.status(200).send(result);
-    });
-
-});
-
-router.get("/get/:id", (req, res) => {
 
     Discussion.find({}, (err, result) => {
-        if (err) 
+        if (err)
             res.status(500).send(err);
-        
-        else if (!result.length) 
+
+        else if (!result.length)
             res.status(404).send(`No entries found in the database`);
         else
-        res.status(200).send(result);
+            res.status(200).send(result);
     });
+
 });
 
 
