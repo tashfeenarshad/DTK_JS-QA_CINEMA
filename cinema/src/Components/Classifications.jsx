@@ -46,7 +46,7 @@ export default function Classifications() {
         Films classified 12A and video works classified 12 contain material 
         that is not generally suitable for children aged under 12.
         </Card.Text>
-        <a href ="https://www.bbfc.co.uk/rating/12" target="_blank" rel="noreferrer"><Button variant="warning">Go somewhere</Button></a>
+        <a href ="https://www.bbfc.co.uk/rating/12" target="_blank" rel="noreferrer"><Button variant="warning">Read More</Button></a>
     
       </Card.Body>
     </Card>
