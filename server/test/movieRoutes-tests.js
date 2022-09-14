@@ -44,7 +44,7 @@ describe('Testing the movie routes', function() {
     it('Should complete get/:id request with status 200', function(done) {
         chai
         .request(app)
-        .get('/movie/get/:id')
+        .get('/movie/get/631f436bd05e565ba974000a')
         .end(function(err, response) {
           expect(err).to.be.null;
           expect(response).to.have.status(200);

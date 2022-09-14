@@ -8,22 +8,11 @@ const expect = chai.expect;
 
 describe('Testing the booking routes', function() {
 
-    it('Should complete getAll request with status 200', function(done) {
-        chai
-        .request(app)
-        .get('/booking/getAll')
-        .end(function(err, response) {
-          expect(err).to.be.null;
-          expect(response).to.have.status(200);
-          done();
-        });
-    });
-
 
     it('Should complete get/:id request with status 200', function(done) {
         chai
         .request(app)
-        .get('/booking/get/:id')
+        .get('/booking/get/631f438dd05e565ba9740014')
         .end(function(err, response) {
           expect(err).to.be.null;
           expect(response).to.have.status(200);
