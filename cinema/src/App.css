@@ -172,3 +172,44 @@ body {
   --bs-list-group-color: #bdbdbd !important;
   --bs-list-group-bg: rgb(29 7 42) !important;
 }
+
+/* about page */
+
+.aboutDiv{
+  min-width: 10vh;
+  width: 35%;
+  justify-content: center;
+  background-color: rgb(29 7 42);
+  padding: 3rem 3rem;
+  border-radius: 2rem;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  box-shadow: 0px 0px 15px rgb(0 0 0), inset 0px 0px 15px 0px rgb(70 70 70 / 12%);
+  display: inline-block;
+  
+}
+
+.aboutDivGroup{
+  
+  margin-bottom: 10px;
+  text-align: center;
+  
+}
+
+.scrumDiv{
+  margin-right: 0%;
+  margin-bottom: 20%;
+  text-align: center;
+
+}
+
+.aboutCard{
+padding-top: 1rem;
+line-height: 150%;
+padding: left 5rem; ;
+}
+.aboutCard>motion.div{
+  width: 5rem;
+}
