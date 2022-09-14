@@ -5,7 +5,6 @@ import PGClassification from './Images/PGClassification.jpg'
 import TwelveClassification from './Images/12Classification.jpg'
 import FifteenClassification from './Images/15Classification.jpg'
 import EighteenClassification from './Images/18Classification.jpg'
-import Row from 'react-bootstrap/esm/Row';
 
 
 
