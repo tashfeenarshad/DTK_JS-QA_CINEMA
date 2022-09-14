@@ -19,17 +19,6 @@ describe('Testing the discussion routes', function() {
     });
 
 
-    it('Should complete get/:id request with status 200', function(done) {
-        chai
-        .request(app)
-        .get('/discussion/get/:id')
-        .end(function(err, response) {
-          expect(err).to.be.null;
-          expect(response).to.have.status(200);
-          done();
-        });
-    });
-
     it('Should complete post request with status 201', function(done) {
         const data =        {
             "name" : "Commenter43",
