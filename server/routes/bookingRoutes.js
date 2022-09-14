@@ -10,7 +10,6 @@ router.get("/get/:id", (req, res) => {
         console.log(err);
         if (err)
             res.status(500).send(err);
-
         else if (!result)
             res.status(404).send(`No entry with ID ${req.params.id} found`);
         else
