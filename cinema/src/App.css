@@ -20,7 +20,7 @@ body {
 
 .dropdown-menu-dark {
   --bs-dropdown-bg: rgb(29 7 42) !important;
-  outline:#bdbdbd 1px solid;
+  outline: #bdbdbd 1px solid;
 }
 
 /* Navbas */
@@ -30,7 +30,8 @@ body {
   --bs-active-color: rgb(100 0 73) !important;
 }
 
-.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+.navbar-nav .nav-link.active,
+.navbar-nav .show>.nav-link {
   color: rgb(100 0 73) !important;
 }
 
@@ -185,12 +186,12 @@ body {
 
 /* Discussion */
 
-.discussionContainer{
+.discussionContainer {
   display: flex;
   padding-bottom: 5%;
 }
 
-.discussionFormContrainer{
+.discussionFormContrainer {
   box-shadow: 0px 0px 15px rgb(0 0 0), inset 0px 0px 15px 0px rgb(70 70 70 / 12%);
   width: 30%;
   margin: 30px;
@@ -200,13 +201,13 @@ body {
   border-radius: 10px;
 }
 
-.disscussionListContainer{
-  
+.disscussionListContainer {
+
   width: 60%;
   margin: 10px;
 }
 
-.disscussionListContainer > .list-group{
+.disscussionListContainer>.list-group {
   box-shadow: 0px 0px 15px rgb(0 0 0), inset 0px 0px 15px 0px rgb(70 70 70 / 12%);
   border-radius: 10px;
   margin: 10px
@@ -218,7 +219,7 @@ body {
   margin: 5%;
 }
 
-.classificationContainer > .card {
+.classificationContainer>.card {
   box-shadow: 0px 0px 15px rgb(0 0 0), inset 0px 0px 15px 0px rgb(70 70 70 / 12%);
   background-color: rgb(29 7 42);
   color: #bdbdbd;

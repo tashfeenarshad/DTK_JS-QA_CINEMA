@@ -3,7 +3,7 @@ import Modal from 'react-bootstrap/Modal';
 import React from 'react';
 
 export default function PaymentModal(props) {
-    
+
   return (
     <Modal
       {...props}
