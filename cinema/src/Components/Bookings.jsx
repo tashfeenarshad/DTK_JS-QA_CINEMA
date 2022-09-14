@@ -93,10 +93,9 @@ const Bookings = () => {
 
   const changeHandler = (e) => {
 
-    e.preventDefault()
-
     axios.get(`http://localhost:5015/movie/get/${e.target[e.target.selectedIndex].id}`)
       .then((res) => {
+        console.log(res);
         res.data.showtime.map((schedule) => (setShowingTimes(schedule.times), setShowingDays(schedule.days), setTime(schedule.times[0], setDay(schedule.days[0]))));
         setMovie(res.data.title);
       }).catch((err) => {
@@ -122,7 +121,7 @@ const Bookings = () => {
 
               <Form.Group as={Col} controlId="formGridText">
                 <Form.Label>Card Number</Form.Label>
-                <Form.Control type="number" placeholder="Card Number" pattern="^4\d{3}\d{4}\d{4}" onChange={(e) => { setCardNumber(e.target.value) }} required minLength={12}/>
+                <Form.Control type="number" placeholder="Card Number" pattern="/^(?:4[0-9]\d{12}(?:[0-9]{3})?)$/" onChange={(e) => { setCardNumber(e.target.value) }} required minLength={12} maxLength={12} />
               </Form.Group>
             </Row>
 

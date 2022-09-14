@@ -1,18 +1,18 @@
 import Nav from 'react-bootstrap/Nav';
 import Navbar from "react-bootstrap/Navbar";
 
-function Footer(){
-    return(
+function Footer() {
+    return (
         <Navbar fixed="bottom">
             <Nav className="justify-content-center" >
                 <Nav.Item>
-                <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="/">Home</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                <Nav.Link href="/contact">Contact Us</Nav.Link>
+                    <Nav.Link href="/contact">Contact Us</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                <Nav.Link href="/about">About Us</Nav.Link>
+                    <Nav.Link href="/about">About Us</Nav.Link>
                 </Nav.Item>
             </Nav>
         </Navbar>
