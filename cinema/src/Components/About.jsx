@@ -102,7 +102,7 @@ function About() {
   
       
   
-    <div className="aboutDivGroup">
+    <div className="scrumDiv">
       <div className="aboutDiv">
           <motion.div transition ={{layout: {duration: 0.2,type: "spring"}}} onClick={() => setIsOpen(!isOpen)} className="aboutCard">
             <motion.h2 layout="position">Scrum🏉</motion.h2>
