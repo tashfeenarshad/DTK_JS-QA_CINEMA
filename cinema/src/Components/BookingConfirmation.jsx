@@ -17,8 +17,6 @@ const BookingConfirmation = () => {
         price
     } = state;
 
-    //console.log(state);
-
 
     if (state == null) {
         return (
@@ -65,7 +63,7 @@ const BookingConfirmation = () => {
                                 </tr>
                                 <tr>
                                     <td>Date of purchase</td>
-                                    <td>{new Date(date).toUTCString()}</td>
+                                    <td>{new Date(date).toUTCString().slice(0, -13)}</td>
                                 </tr>
                                 <tr>
                                     <td>Total Price</td>

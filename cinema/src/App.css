@@ -172,3 +172,29 @@ body {
   --bs-list-group-color: #bdbdbd !important;
   --bs-list-group-bg: rgb(29 7 42) !important;
 }
+
+/* Discussion */
+
+.discussionContainer{
+  display: flex;
+  padding-bottom: 5%;
+}
+
+.discussionFormContrainer{
+  width: 30%;
+  margin: 30px;
+  height: fit-content;
+  padding: 30px;
+  background-color: rgb(29 7 42);
+  border-radius: 10px;
+}
+
+.disscussionListContainer{
+  width: 60%;
+  margin: 10px;
+}
+
+.list-group{
+  border-radius: 10px;
+  margin: 10px
+}
