@@ -13,7 +13,7 @@ export default function Home() {
         <img
           src={Images}
           alt="Cinema"
-          width={"70%"}
+          style={{width: "-webkit-fill-available"}}
         />
         <Carousel.Caption>
           <h3>QA Cinema</h3>
