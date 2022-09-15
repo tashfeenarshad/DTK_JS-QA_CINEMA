@@ -15,7 +15,7 @@ function OpeningTimes() {
             <Card.Text>
               15:00 - 23:00
             </Card.Text>
-            <Button variant="primary">Booking</Button>
+            <Button variant="primary" href="/bookings">Booking</Button>
           </Card.Body>
         </Card>
         <Card style={{ width: '15rem', margin: "10px" }}>
@@ -25,7 +25,7 @@ function OpeningTimes() {
             <Card.Text>
               15:00 - 23:00
             </Card.Text>
-            <Button variant="primary">Booking</Button>
+            <Button variant="primary" href="/bookings">Booking</Button>
           </Card.Body>
         </Card>
         <Card style={{ width: '15rem', margin: "10px" }}>
@@ -35,7 +35,7 @@ function OpeningTimes() {
             <Card.Text>
               15:00 - 23:00
             </Card.Text>
-            <Button variant="primary">Booking</Button>
+            <Button variant="primary" href="/bookings">Booking</Button>
           </Card.Body>
         </Card>
         <Card style={{ width: '15rem', margin: "10px" }}>
@@ -45,7 +45,7 @@ function OpeningTimes() {
             <Card.Text>
               15:00 - 23:00
             </Card.Text>
-            <Button variant="primary">Booking</Button>
+            <Button variant="primary" href="/bookings">Booking</Button>
           </Card.Body>
         </Card>
         <Card style={{ width: '15rem', margin: "10px" }}>
@@ -55,7 +55,7 @@ function OpeningTimes() {
             <Card.Text>
               15:00 - 00:00
             </Card.Text>
-            <Button variant="primary">Booking</Button>
+            <Button variant="primary" href="/bookings">Booking</Button>
           </Card.Body>
         </Card>
         <Card style={{ width: '15rem', margin: "10px" }}>
@@ -75,7 +75,7 @@ function OpeningTimes() {
             <Card.Text>
               15:00 - 23:00
             </Card.Text>
-            <Button variant="primary">Booking</Button>
+            <Button variant="primary" href="/bookings">Booking</Button>
           </Card.Body>
         </Card>
       </div>
