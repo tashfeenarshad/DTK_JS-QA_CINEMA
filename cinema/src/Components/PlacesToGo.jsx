@@ -5,8 +5,10 @@ import Carousel from 'react-bootstrap/Carousel';
 export default function PlacesToGo() {
 
   return (<>
-    <h1>Places To Go</h1>
+    
     <br />
+    <br />
+    <h1 style={{ display: 'flex', justifyContent: 'center', fontWeight: 'bold' }}>Places To Go</h1>
 
     <Carousel>
       <Carousel.Item>
@@ -57,6 +59,9 @@ export default function PlacesToGo() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    <br/>
+    <br/>
+    <br/>
 
 
   </>);

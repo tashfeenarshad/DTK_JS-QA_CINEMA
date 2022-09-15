@@ -53,31 +53,31 @@ const Bookings = () => {
     return errors;
   };
 
- 
-    
-    
-    
-    const [errors, setErrors] = useState({});
-    
-    function onChange(e) {
-      setCardNumber(e.target.value);
-    }
-    function onChangeExpiry(e) {
-      setExpiringDate(e.target.value);
-    }
-    function onChangeCVV(e) {
-      setCvv(e.target.value);
-    }
-    
-    function blurCardNumber(e) {
-      setErrors(validateCardNumber(e.target.value));
-    }
-    function blurExpiry(e) {
-      setErrors(validateExpiry(e.target.value));
-    }
-    function blurCVV(e) {
-      setErrors(validateCVV(e.target.value));
-    }
+
+
+
+
+  const [errors, setErrors] = useState({});
+
+  function onChange(e) {
+    setCardNumber(e.target.value);
+  }
+  function onChangeExpiry(e) {
+    setExpiringDate(e.target.value);
+  }
+  function onChangeCVV(e) {
+    setCvv(e.target.value);
+  }
+
+  function blurCardNumber(e) {
+    setErrors(validateCardNumber(e.target.value));
+  }
+  function blurExpiry(e) {
+    setErrors(validateExpiry(e.target.value));
+  }
+  function blurCVV(e) {
+    setErrors(validateCVV(e.target.value));
+  }
 
   const handleSubmit = (e) => {
 
@@ -228,7 +228,7 @@ const Bookings = () => {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formGridTime">
-          <Form.Label>Time</Form.Label>
+          <Form.Label>Day</Form.Label>
           <Form.Select defaultValue="Choose..." onChange={(e) => { setDay(e.target.value) }} required>
             {(showingDays == null) ? (<option>Choose a day</option>) :
               (showingDays.map((days, i) =>
