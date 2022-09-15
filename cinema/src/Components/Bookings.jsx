@@ -31,6 +31,54 @@ const Bookings = () => {
   const [expiringDate, setExpiringDate] = useState();
   const [cvv, setCvv] = useState();
 
+  function validateCardNumber(value) {
+    let errors = {};
+    if (!/^(?:4[0-9]\d{11}(?:[0-9]{3})?)$/.test(value)) {
+      errors.cardNumber = 'Visa Card Number is invalid';
+    }
+    return errors;
+  };
+  function validateExpiry(value) {
+    let errors = {};
+    if (!/^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$/.test(value)) {
+      errors.expiringDate = 'Expiry Date is invalid';
+    }
+    return errors;
+  };
+  function validateCVV(value) {
+    let errors = {};
+    if (!/^[0-9]{3,4}$/.test(value)) {
+      errors.CVV = 'CVV Number is invalid';
+    }
+    return errors;
+  };
+
+ 
+    
+    
+    
+    const [errors, setErrors] = useState({});
+    
+    function onChange(e) {
+      setCardNumber(e.target.value);
+    }
+    function onChangeExpiry(e) {
+      setExpiringDate(e.target.value);
+    }
+    function onChangeCVV(e) {
+      setCvv(e.target.value);
+    }
+    
+    function blurCardNumber(e) {
+      setErrors(validateCardNumber(e.target.value));
+    }
+    function blurExpiry(e) {
+      setErrors(validateExpiry(e.target.value));
+    }
+    function blurCVV(e) {
+      setErrors(validateCVV(e.target.value));
+    }
+
   const handleSubmit = (e) => {
 
     e.preventDefault();
@@ -121,14 +169,15 @@ const Bookings = () => {
 
               <Form.Group as={Col} controlId="formGridText">
                 <Form.Label>Card Number</Form.Label>
-                <Form.Control type="number" placeholder="Card Number" pattern="/^(?:4[0-9]\d{12}(?:[0-9]{3})?)$/" onChange={(e) => { setCardNumber(e.target.value) }} required minLength={12} maxLength={12} />
+                <Form.Control type="number" placeholder="Card Number" value={cardNumber} onChange={onChange} onBlur={blurCardNumber} required />
+                {errors.cardNumber && <div>{errors.cardNumber}</div>}
               </Form.Group>
             </Row>
 
             <Form.Group className="mb-3" controlId="formGridDate">
               <Form.Label>Expiry</Form.Label>
-              <Form.Control type="Number" placeholder="MM/YY" pattern="/^(0[1-9]|1[0-2])\/?([0-9]{2})$/"
-                onChange={(e) => { setExpiringDate(e.target.value) }} required />
+              <Form.Control type="text" placeholder="MM/YY" value={expiringDate} onChange={onChangeExpiry} onBlur={blurExpiry} required />
+              {errors.expiringDate && <div>{errors.expiringDate}</div>}
             </Form.Group>
 
 
@@ -136,7 +185,8 @@ const Bookings = () => {
 
             <Form.Group className="mb-3" controlId="formGridNumber">
               <Form.Label>CVV</Form.Label>
-              <Form.Control type="number" name="cvv" placeholder="CVV" onChange={(e) => { setCvv(e.target.value) }} pattern="/^[0-9]{3,4}$/" required />
+              <Form.Control type="number" name="cvv" placeholder="CVV" value={cvv} onChange={onChangeCVV} onBlur={blurCVV} required />
+              {errors.CVV && <div>{errors.CVV}</div>}
             </Form.Group>
 
           </Modal.Body>
