@@ -107,7 +107,7 @@ function DiscussionBoard() {
                 </div>
 
                 <div className='disscussionListContainer'>
-                    {items.map((item) =>
+                    {items.slice(0).reverse().map((item) =>
                     (<ListGroup key={item._id} >
                         <ListGroup.Item>{item.name}</ListGroup.Item>
                         <ListGroup.Item>Movie: {item.movie}</ListGroup.Item>
