@@ -5,6 +5,8 @@ import Row from 'react-bootstrap/Row';
 import emailjs from '@emailjs/browser';
 import React, { useRef } from 'react';
 import Keys from "./hideemail.json";
+import{FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import{faTwitter, faInstagram} from "@fortawesome/free-brands-svg-icons";
 
 export const Contact = () => {
   const form = useRef();
@@ -43,15 +45,17 @@ export const Contact = () => {
             <br/>
 
           <h3>Contacts</h3>
-          <p>Tel:
+          <p>
+            Tel: 020 9999 9999
             <br />
-            Email
+            Email: qa_cinemas@gmail.com
             <br />
-            Website:
+            Website: qacinemas.co.uk
             <br />
-            Twitter:
+            <FontAwesomeIcon icon={faTwitter} />
             <br />
-            Instagram:</p>
+            <FontAwesomeIcon icon={faInstagram} />
+          </p>
         </div>
 
 
