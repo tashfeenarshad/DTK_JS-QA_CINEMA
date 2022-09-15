@@ -1,14 +1,14 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Row from 'react-bootstrap/esm/Row';
 
 function OpeningTimes() {
   return (
     <>
-      <h1>Opening Times</h1>
       <br />
-      <Row>
-        <Card style={{ width: '15rem' }} >
+      <br />
+      <h1 style={{ display: 'flex', justifyContent: 'center', fontWeight: 'bold' }}>Opening Times</h1>
+      <div className='openingTimesContainer'>
+        <Card style={{ width: '15rem', margin: "10px" }} >
 
           <Card.Body>
             <Card.Title>Monday</Card.Title>
@@ -18,7 +18,7 @@ function OpeningTimes() {
             <Button variant="primary">Booking</Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: '15rem' }}>
+        <Card style={{ width: '15rem', margin: "10px" }}>
 
           <Card.Body>
             <Card.Title>Tuesday</Card.Title>
@@ -28,7 +28,7 @@ function OpeningTimes() {
             <Button variant="primary">Booking</Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: '15rem' }}>
+        <Card style={{ width: '15rem', margin: "10px" }}>
 
           <Card.Body>
             <Card.Title>Wednesday</Card.Title>
@@ -38,7 +38,7 @@ function OpeningTimes() {
             <Button variant="primary">Booking</Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: '15rem' }}>
+        <Card style={{ width: '15rem', margin: "10px" }}>
 
           <Card.Body>
             <Card.Title>Thursday</Card.Title>
@@ -48,7 +48,7 @@ function OpeningTimes() {
             <Button variant="primary">Booking</Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: '15rem' }}>
+        <Card style={{ width: '15rem', margin: "10px" }}>
 
           <Card.Body>
             <Card.Title>Friday</Card.Title>
@@ -58,17 +58,17 @@ function OpeningTimes() {
             <Button variant="primary">Booking</Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: '15rem' }}>
+        <Card style={{ width: '15rem', margin: "10px" }}>
 
           <Card.Body>
             <Card.Title>Saturday</Card.Title>
             <Card.Text>
               15:00 - 00:00
             </Card.Text>
-            <Button variant="primary">Booking</Button>
+            <Button variant="primary" href="/bookings">Booking</Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: '15rem' }}>
+        <Card style={{ width: '15rem', margin: "10px" }}>
 
           <Card.Body>
             <Card.Title>Sunday</Card.Title>
@@ -78,7 +78,7 @@ function OpeningTimes() {
             <Button variant="primary">Booking</Button>
           </Card.Body>
         </Card>
-      </Row>
+      </div>
     </>);
 }
 export default OpeningTimes;
