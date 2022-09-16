@@ -71,29 +71,6 @@ client dependencies:
 - npm i react-router-doms axios reactstrap react react-dom @stripe/react-stripe-js @stripe/stripe-js emailjs react-rating-stars-component
 
 - npm install --save bootstrap
-Troubleshooting
-Make sure the Mongo DB URI in the secrets folder within the server folder matches the URI in the Mongo URI.js. This project uses ports 3000 for the front end and 3001 for the backend. Make sure they are free before running or modify server.js if necessary.
-
-# Testing
-Once you got the project setup install Mocha, Chai and Istanbul to view coverage. Set testDB on line 10 in server.js to true before running tests. This way, it will use a different database when testing and won't affect the production database.
-
-In your terminal run: npm test to run the tests and check that they all pass or run npm run coverage to check the test coverage
-
-# Deployment
-Deployment can be acheived by running
-
- npm run dev
-Once you're in the project directory within your terminal. The webpage uses localhost:3000 as api URL and the MongoDB URL uses localhost:27017.
-
-Built With
-Visual Studio Code: IDE Mongo DB Express React Node Mocha Chai Stripe API emailJS
-
-# Versioning
-We Used Git for versioning
-
-
-
-
 
 
 
@@ -167,6 +144,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Testing
+Once you got the project setup install Mocha, Chai and Istanbul to view coverage. 
+
+In your terminal run: npm test to run the tests and check that they all pass or run npm run coverage to check the test coverage
+
+# Deployment
+Deployment can be acheived by running npm start on the client side and nodemon index.js on the server side.
+
+
+
+# Built With
+Visual Studio Code: IDE Mongo DB Express React Node Mocha Chai Stripe API emailJS
+
+# Versioning
+We Used Git for versioning
+
+
 
 
 # Authors
