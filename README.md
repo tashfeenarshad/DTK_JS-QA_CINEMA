@@ -1,4 +1,4 @@
-Coverage: 78.20%
+Coverage: 80.20%
 
 ## Final Project - QA Cinemas
 For this group project we created a MERN stack web application for our QA cinema's website. This was connected to a backend database using MongoDB Cloud Atlas which allowed us to record films and customer bookings.
