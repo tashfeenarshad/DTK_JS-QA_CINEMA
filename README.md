@@ -170,4 +170,4 @@ We Used Git for versioning
 * Syed Zaidi
 * Kya Edmeade
 # Acknowledgements
-The whole QA team and their trainers.
+The whole QA team and the trainers.
