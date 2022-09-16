@@ -1,4 +1,4 @@
-Coverage: 78.00%
+Coverage: 82.15%
 
 ## Final Project - QA Cinemas
 For this group project we created a MERN stack web application for our QA cinema's website. This was connected to a backend database using MongoDB Cloud Atlas which allowed us to record films and customer bookings.
@@ -8,16 +8,15 @@ The aim of the project was to develop a full stack application where users can n
 
 #Tech Stack
 This project consisted of us using the following technlogies:
-
--Version Control System: Git
--Source Code Management: GitHub
--Kanban Board: Jira
--Full-Stack Development Technologies: MERN stack
--Database Management System: MongoDB Atlas database
--Back-End Programming Language: Node
--API Development Platform: Express
--Front-End Development Framework: React
--Unit Testing: Mocha, Chai
+* Version Control System: Git
+* Source Code Management: GitHub
+* Kanban Board: Jira
+* Full-Stack Development Technologies: MERN stack
+* Database Management System: MongoDB Atlas database
+* Back-End Programming Language: Node
+* API Development Platform: Express
+* Front-End Development Framework: React
+* Unit Testing: Mocha, Chai
 
 #Prerequisites programms to install
 Git bash needs to be installed to clone this repository. Instructions for download can be found here
